@@ -1,9 +1,11 @@
-import React from 'react'
+import React,{Fragment} from 'react'
+
+import Home from './pages/Home'
 
 const App = () => (
-    <div>
-        Minha cena
-    </div>
+    <Fragment>
+        <Home/>
+    </Fragment>
 )
 
 export default App

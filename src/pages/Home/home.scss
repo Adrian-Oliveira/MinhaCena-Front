@@ -1,0 +1,77 @@
+$text_color: #FAF9FA;
+
+.banerHome{
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    padding-top: 8.33px;
+    padding-bottom: 8.33px;
+    /* background-color: red; */
+    position: relative;
+    width: 89% ;
+    height: 68.68px;
+    left: 5.5%;
+    top: 16px;
+
+    /* brand/branco */
+    color: $text_color;
+
+    /* text */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    div{
+        margin-right: 48px;
+    }
+
+    .logo{
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        bottom: 0%;
+
+
+        /* Inside Auto Layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 0px 10px;
+    }
+    
+        
+    button{
+        background-color: transparent;
+        width: 133px;
+        height: 100%;
+        
+        border: 2px solid #FAF9FA;
+        box-sizing: border-box;
+        border-radius: 16px;
+        
+        
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        
+        /* identical to box height */
+        text-align: center;
+        
+        /* brand/branco */
+        color: $text_color;
+        
+    }
+    
+}
