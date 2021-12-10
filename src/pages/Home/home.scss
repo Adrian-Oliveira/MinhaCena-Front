@@ -1,6 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+$font-main:'Montserrat', sans-serif;
 $text_color: #FAF9FA;
 
-.banerHome{
+
+.test{
+    width: 100%;
+    height: 200px;
+    background-image: image('../../core/assets/img/bannerHome.png');
+
+}
+
+.banner{
+    margin-top: 55.32px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: $text_color;
+    
+    .title{
+        font-family: $font-main;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 54px;
+        line-height: 66px;
+
+        /* identical to box height */
+        text-align: center;
+        -webkit-text-stroke: 1.1px black;
+
+    }
+
+    .subtitle{
+        margin-top: 8px;
+        font-family: $font-main;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 39px;
+
+        -webkit-text-stroke: 1.1px black;
+    }
+
+    button{
+        margin-top: 32px;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 34px;
+        width: 384px;
+        height: 52px;
+
+        /* text */
+        font-family: $font-main;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+
+        /* identical to box height */
+        text-align: center;
+
+        /* brand/branco */
+        color: $text_color;
+
+
+        /* brand/gradient */
+        background: linear-gradient(135deg, #FD6585 0%, #0D25B9 100%);
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 8px 24px rgba(168, 78, 151, 0.15);
+        border-radius: 16px;
+    }
+
+}
+.banerImage{
     position: absolute;
     width: 100%;
     left: 0px;
@@ -15,7 +91,6 @@ header{
     align-items: center;
     padding-top: 8.33px;
     padding-bottom: 8.33px;
-    /* background-color: red; */
     position: relative;
     width: 89% ;
     height: 68.68px;
@@ -26,13 +101,20 @@ header{
     color: $text_color;
 
     /* text */
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
 
-    div{
+
+    :hover{
+        text-decoration: underline;
+        cursor: pointer ;
+    }
+    a{
         margin-right: 48px;
+        :hover{
+            text-decoration: underline;
+        }
     }
 
     .logo{
@@ -60,9 +142,8 @@ header{
         border-radius: 16px;
         
         
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: bold;
+        font-family: 'Montserrat';
+        font-weight: 700;
         font-size: 16px;
         line-height: 20px;
         

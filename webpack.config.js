@@ -11,7 +11,6 @@ module.exports = {
     historyApiFallback: true,
     open: true,
     compress: true,
-    hot: true,
     port: 8080,
    },
    entry: {
@@ -42,11 +41,7 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
-        use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
-          { loader: 'sass-loader' }
-        ]
+        use: [ 'style-loader', 'css-loader','sass-loader' ]
       },
     ],
    },

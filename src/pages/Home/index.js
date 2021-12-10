@@ -5,21 +5,40 @@ import logo from '../../core/assets/icons/logo.png'
 import './home.scss'
 
 const Home = () => (
-    <Fragment>
+    <Fragment>  
+
         <header>
             <img className='logo' src={logo} />
 
-
-            
-            <div> Inicio </div>
-            <div> Quem Somos</div>
-            <div> Quero Fazer Parte</div>
+            <a> Inicio </a>
+            <a> Quem Somos</a>
+            <a> Quero Fazer Parte</a>
             
             <button>Entrar</button>
-            
         </header>
 
-        <img className="banerHome" src={bannerHome}/>
+        <div className='banner'>
+
+            <img className='banerImage' src={bannerHome}/>
+
+            <div className='title'>
+                MinhaCena.org
+            </div>
+            
+            <div className='subtitle'>
+                Dando vida à redações através de ilustrações
+            </div>
+
+            <button>Quero fazer parte</button>
+
+        </div>
+
+        <div className='test' >
+
+
+        </div>
+    
+
     </Fragment>
 )
 
