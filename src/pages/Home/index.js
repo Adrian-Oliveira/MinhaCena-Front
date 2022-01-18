@@ -3,6 +3,7 @@ import React,{Fragment} from 'react'
 import bannerHome from '../../core/assets/img/bannerHome.png'
 import logo from '../../core/assets/icons/logo.png'
 import logo1 from '../../core/assets/icons/logo_minhacena1.png'
+
 import './home.scss'
 
 const Home = () => (
