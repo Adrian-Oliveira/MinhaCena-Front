@@ -37,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.(jpeg|jpg|ttf|woff|png|wav|ico)$/,
-        loader: 'url-loader'
+        loader: 'file-loader'
       },
       {
         test: /\.(css|scss)$/,
