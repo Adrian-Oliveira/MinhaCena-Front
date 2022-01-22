@@ -1,9 +1,13 @@
 import React, {Fragment} from "react";
+import { Outlet } from "react-router-dom";
 
 import imgCadastro from '../../core/assets/img/imagem_cadastro.png'
 import logoCadastro from '../../core/assets/icons/logo_cadastro.png'
 
 import './cadastro.scss'
+
+import Professor from "../Professor";
+import Ilustrador from "../Ilustrador";
 
 const Cadastro = () => {
     
@@ -24,6 +28,9 @@ const Cadastro = () => {
 
                 <div className="formCadastro">
                     <img className="logoForm" src={logoCadastro} />
+                    
+                    <Outlet/>
+
                 </div>
             </div>
         </Fragment>
