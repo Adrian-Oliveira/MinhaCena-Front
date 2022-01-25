@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const webpack = require('webpack')
 
-module.exports = {
+module.exports = () => ({
 
    mode: 'development',
    devtool: 'cheap-module-source-map',
@@ -51,7 +51,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Minha Cena',
-      template: path.resolve(__dirname, './src/index.html'),
+      template: path.resolve(__dirname, '/src/index.html'),
       filename: 'index.html',
       minify: {
         collapseWhitespace: true,
@@ -61,4 +61,4 @@ module.exports = {
       },
     }),
    ]
-}
+})

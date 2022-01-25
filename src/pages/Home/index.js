@@ -6,8 +6,16 @@ import logo1 from '../../core/assets/icons/logo_minhacena1.png'
 
 import './home.scss'
 
-const Home = () => (
-    <Fragment>  
+import { Link } from 'react-router-dom'
+
+
+const Home = () => {
+
+    
+
+    return( 
+
+        <Fragment>  
 
         <div className='banne' style={{
             backgroundImage: `url(${bannerHome})`,
@@ -34,7 +42,7 @@ const Home = () => (
                 <div className='subtitle'>
                     Dando vida à redações através de ilustrações
                 </div>
-
+                <Link to="cadastro">Home</Link>
                 <button>Quero fazer parte</button>
 
             </div>
@@ -67,7 +75,11 @@ const Home = () => (
                 <p>Como ilustrador, você pode contribuir adotando uma redação para criar suas
                     ilustrações incríveis, gerarando conteúdo para seu portfolio e dar vida a
                     redação de um aluno(a).</p>
-                <button>Quero ilustrar</button>    
+                
+                    
+
+                    <button>Quero ilustrar</button>    
+                
             </div>
             
             <div className='professor'>
@@ -90,6 +102,7 @@ const Home = () => (
         </footer>
 
     </Fragment>
-)
+    );
+}
 
 export default Home

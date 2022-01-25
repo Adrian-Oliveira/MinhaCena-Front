@@ -1,7 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import App from "./App";
 import './core/assets/scss/Main.scss'
+import RouterApp from "./RouterApp";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+
+ReactDOM.render(
+    <React.StrictMode>
+        <RouterApp/> 
+    </React.StrictMode>
+     , document.getElementById("root"));
