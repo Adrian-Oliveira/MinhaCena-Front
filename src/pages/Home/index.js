@@ -42,9 +42,11 @@ const Home = () => {
                 <div className='subtitle'>
                     Dando vida à redações através de ilustrações
                 </div>
-                <Link to="cadastro">Home</Link>
-                <button>Quero fazer parte</button>
 
+                <Link to="cadastro">
+                    <button>Quero fazer parte</button>
+                </Link>
+                
             </div>
 
         </div>

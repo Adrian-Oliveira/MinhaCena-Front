@@ -9,8 +9,20 @@ import './cadastro.scss'
 import Professor from "../Professor";
 import Ilustrador from "../Ilustrador";
 
+
+import { FromCadastroActions, useCadastro } from "../../core/utils/contextCadastro";
+
 const Cadastro = () => {
     
+    const {state, dispatch } = useCadastro();
+
+    const handleChange = (event) => {
+        dispatch({
+            type: FromCadastroActions.setProfession,
+            payload: event.target.value
+        });
+    };
+
     return (
         <Fragment>
             <div className="cadastro" >
@@ -29,6 +41,16 @@ const Cadastro = () => {
                 <div className="formCadastro">
                     <img className="logoForm" src={logoCadastro} />
                     
+                    <h1>Profissão: {state.profession} </h1>
+
+                    <label>
+                        <input 
+                            type='text'
+                            onChange={handleChange}
+                        />
+                        
+                    </label>
+
                     <Outlet/>
 
                 </div>

@@ -19,35 +19,39 @@ import IlustradorStep1 from './pages/Ilustrador/step1';
 import IlustradorStep2 from './pages/Ilustrador/step2';
 import IlustradorStep3 from './pages/Ilustrador/step3';
 
+import { CadastroProvider } from './core/utils/contextCadastro';
 
 
 
 const RouterApp = ()=>{
 
     return(
-        <HashRouter>
-            <Routes>
 
-                <Route path="/" element={<Home/>}/>
+        <CadastroProvider>
+            <HashRouter>
+                <Routes>
 
-                <Route path="cadastro" element={<Cadastro/>} >
-                    
-                    <Route path="professor" element={<Professor/>}>
-                    <Route path="step1" element={<ProfessorStep1/>} />
-                    <Route path="step2" element={<ProfessorStep2/>} />
-                    <Route path="step3" element={<ProfessorStep3/>} />
-                    </Route>
-                    
-                    <Route path="ilustrador" element={<Ilustrador/>}>
-                    <Route path="step1" element={<IlustradorStep1/>} />
-                    <Route path="step2" element={<IlustradorStep2/>} />
-                    <Route path="step3" element={<IlustradorStep3/>} />
-                    </Route>
-                </Route>   
+                    <Route path="/" element={<Home/>}/>
 
-            </Routes>
-        </HashRouter>
+                    <Route path="cadastro" element={<Cadastro/>} >
+                        
+                        <Route path="professor" element={<Professor/>}>
+                        <Route path="step1" element={<ProfessorStep1/>} />
+                        <Route path="step2" element={<ProfessorStep2/>} />
+                        <Route path="step3" element={<ProfessorStep3/>} />
+                        </Route>
+                        
+                        <Route path="ilustrador" element={<Ilustrador/>}>
+                        <Route path="step1" element={<IlustradorStep1/>} />
+                        <Route path="step2" element={<IlustradorStep2/>} />
+                        <Route path="step3" element={<IlustradorStep3/>} />
+                        </Route>
+                    </Route>   
 
+                </Routes>
+            </HashRouter>
+        </CadastroProvider>
+        
     );
 }
 

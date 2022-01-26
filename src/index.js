@@ -6,7 +6,5 @@ import RouterApp from "./RouterApp";
 
 
 ReactDOM.render(
-    <React.StrictMode>
-        <RouterApp/> 
-    </React.StrictMode>
-     , document.getElementById("root"));
+    <RouterApp/> 
+ , document.getElementById("root"));
