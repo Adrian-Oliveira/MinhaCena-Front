@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 import imgCadastro from '../../core/assets/img/imagem_cadastro.png'
 import logoCadastro from '../../core/assets/icons/logo_cadastro.png'
@@ -10,15 +10,21 @@ import Professor from "../Professor";
 import Ilustrador from "../Ilustrador";
 
 
-import { FromCadastroActions, useCadastro } from "../../core/utils/contextCadastro";
+import { FormCadastroActions, useCadastro } from "../../core/utils/contextCadastro";
 
 const Cadastro = () => {
+
+    const navigate = useNavigate();
     
     const {state, dispatch } = useCadastro();
 
+    const handleClickCadastro = () =>{
+        navigate('professor/step1')
+    };
+
     const handleChange = (event) => {
         dispatch({
-            type: FromCadastroActions.setProfession,
+            type: FormCadastroActions.setProfession,
             payload: event.target.value
         });
     };
@@ -39,18 +45,35 @@ const Cadastro = () => {
                 </div>
 
                 <div className="formCadastro">
-                    <img className="logoForm" src={logoCadastro} />
-                    
-                    <h1>Profissão: {state.profession} </h1>
+                    <label >
+                        Fazer cadastro como:{state.profession}
+                        <br/>
 
-                    <label>
-                        <input 
-                            type='text'
-                            onChange={handleChange}
-                        />
-                        
+                        <label>
+                        Professor(a):
+                            <input 
+                                type="radio" 
+                                value="professor" 
+                                checked = {state.profession === "professor"}
+                                onChange={handleChange} 
+                            /> 
+                        </label>
+                        <br/>
+
+                        <label>
+                        Ilustrador(a):    
+                            <input 
+                                type="radio"
+                                value="ilustrador"
+                                checked = {state.profession === "ilustrador"}
+                                onChange={handleChange} 
+                            /> 
+                        </label>
+
+
+                        <button onClick={handleClickCadastro}>Próximo</button>
                     </label>
-
+                    
                     <Outlet/>
 
                 </div>

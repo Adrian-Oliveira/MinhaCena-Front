@@ -11,18 +11,20 @@ const initialData = {
     birthday: '',
     email: '',
     schoolname: '',
+    city:'',
     contact: ''
 };
 
 //Reducer 
-export const FromCadastroActions = {
+export const FormCadastroActions = {
     setProfession: 'profession',
     setRg: 'rg',
     setName: 'name',
     setBirthday: 'birthday',
     setEmail: 'email',
     setSchoolname: 'schoolname',
-    setContact: 'Contact'
+    setCity: 'city',
+    setContact: 'contact'
 };
 
 
@@ -30,25 +32,28 @@ const cadastroReducer = (state, action) =>{
 
     switch(action.type){
         
-        case FromCadastroActions.setProfession:
+        case FormCadastroActions.setProfession:
             return {...state, profession:action.payload};
         
-        case FromCadastroActions.setRg:
+        case FormCadastroActions.setRg:
             return {...state, rg:action.payload};
 
-        case FromCadastroActions.setName:
+        case FormCadastroActions.setName:
             return {...state, name:action.payload};
 
-        case FromCadastroActions.setBirthday:
+        case FormCadastroActions.setBirthday:
             return {...state, birthday:action.payload};
 
-        case FromCadastroActions.setEmail:
+        case FormCadastroActions.setEmail:
             return {...state, email:action.payload};
 
-        case FromCadastroActions.setSchoolname:
+        case FormCadastroActions.setSchoolname:
             return {...state, schoolname:action.payload};
 
-        case FromCadastroActions.setContact:
+        case FormCadastroActions.setCity:
+            return {...state, city:action.payload};
+
+        case FormCadastroActions.setContact:
             return {...state, contact:action.payload};
 
         default:
