@@ -46,6 +46,11 @@ const ProfessorStep1 = ()=>{
     return(
         <Fragment>
             <div>
+
+                <div onClick={()=> navigate('../..')}>
+                    Anterior
+                </div>
+
                 <label>
                     Nome
                     <input 

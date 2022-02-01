@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate, useLocation, Link } from "react-router-dom";
 
 import imgCadastro from '../../core/assets/img/imagem_cadastro.png'
 import logoCadastro from '../../core/assets/icons/logo_cadastro.png'
@@ -13,6 +13,8 @@ import Ilustrador from "../Ilustrador";
 import { FormCadastroActions, useCadastro } from "../../core/utils/contextCadastro";
 
 const Cadastro = () => {
+
+    const location = useLocation();
 
     const navigate = useNavigate();
     
@@ -45,34 +47,44 @@ const Cadastro = () => {
                 </div>
 
                 <div className="formCadastro">
-                    <label >
-                        Fazer cadastro como:{state.profession}
-                        <br/>
+                    <div className="inicialStep">
 
-                        <label>
-                        Professor(a):
-                            <input 
-                                type="radio" 
-                                value="professor" 
-                                checked = {state.profession === "professor"}
-                                onChange={handleChange} 
-                            /> 
-                        </label>
-                        <br/>
+                        {(location.pathname === "/cadastro") &&
+                            <Fragment>
+                                <Link to='/'>
+                                    Anterior
+                                </Link>
+                                <label >
+                                    Fazer cadastro como:{state.profession}
+                                    <br/>
 
-                        <label>
-                        Ilustrador(a):    
-                            <input 
-                                type="radio"
-                                value="ilustrador"
-                                checked = {state.profession === "ilustrador"}
-                                onChange={handleChange} 
-                            /> 
-                        </label>
+                                    <label>
+                                    Professor(a):
+                                        <input 
+                                            type="radio" 
+                                            value="professor" 
+                                            checked = {state.profession === "professor"}
+                                            onChange={handleChange} 
+                                            /> 
+                                    </label>
+                                    <br/>
+
+                                    <label>
+                                    Ilustrador(a):    
+                                        <input 
+                                            type="radio"
+                                            value="ilustrador"
+                                            checked = {state.profession === "ilustrador"}
+                                            onChange={handleChange} 
+                                            /> 
+                                    </label>
 
 
-                        <button onClick={handleClickCadastro}>Próximo</button>
-                    </label>
+                                    <button onClick={handleClickCadastro}>Próximo</button>
+                                </label>
+                            </Fragment>
+                        }
+                    </div>    
                     
                     <Outlet/>
 
