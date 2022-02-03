@@ -3,7 +3,8 @@ import {
     HashRouter,
     BrowserRouter,
     Route,
-    Routes
+    Routes,
+    Navigate
   } from "react-router-dom";
 
 import Home from './pages/Home';
@@ -47,6 +48,10 @@ const RouterApp = ()=>{
                         <Route path="step3" element={<IlustradorStep3/>} />
                         </Route>
                     </Route>   
+
+                    
+                    <Route path="*" element={<Navigate to="/" />} />
+                    
 
                 </Routes>
             </HashRouter>
