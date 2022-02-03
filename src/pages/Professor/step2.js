@@ -1,4 +1,4 @@
-import React,{ Fragment } from "react";
+import React,{ Fragment, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import {FormCadastroActions, useCadastro } from '../../core/utils/contextCadastro'
@@ -10,9 +10,15 @@ const ProfessorStep2 = ()=>{
 
     const {state, dispatch} = useCadastro();
 
-    const handleClickNextStep = () =>{
-        
+    useEffect(()=>{
+        if(state.name === '' || state.rg === '' || state.birthday === ''  ||  state.email === ''){
+            navigate('../step1')
+        }
 
+    }, [])
+
+    
+    const handleClickNextStep = () =>{
         if(state.schoolname === '' || state.city === '' || state.contact === ''){
 
             alert(`Preencha todos os campos`);

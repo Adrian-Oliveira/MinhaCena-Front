@@ -1,4 +1,4 @@
-import React,{ Fragment } from "react";
+import React,{ Fragment, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 
@@ -10,6 +10,11 @@ const ProfessorStep3 = ()=>{
 
     const {state,dispatch} = useCadastro();
 
+    useEffect(()=>{
+        if(state.schoolname === '' || state.city === '' || state.contact === ''){
+            navigate('../step2')
+        }
+    },[])
 
     const handleClickNextStep = () =>{
         navigate('/', {replace:true})
