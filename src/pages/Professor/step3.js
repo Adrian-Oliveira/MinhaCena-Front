@@ -11,16 +11,15 @@ const ProfessorStep3 = ()=>{
     const {state,dispatch} = useCadastro();
 
 
-    const handleClickStep3 = () =>{
-        alert("nome:")
-        navigate('../../..')
+    const handleClickNextStep = () =>{
+        navigate('/', {replace:true})
     }
 
     return(
         <Fragment>
             <div>
                 Step3
-                <button onClick={handleClickStep3}>Voltar para home</button>
+                <button onClick={handleClickNextStep}>Voltar para home</button>
             </div>
         </Fragment>
     );

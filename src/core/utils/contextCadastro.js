@@ -6,7 +6,7 @@ const FormCadastro = createContext({});
 
 const initialData = {
     profession: '',
-    rg: 0,
+    rg:'',
     name: '',
     birthday: '',
     email: '',

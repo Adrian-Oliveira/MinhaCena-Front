@@ -11,8 +11,30 @@ const ProfessorStep1 = ()=>{
     const {state, dispatch} = useCadastro();
 
 
-    const handleClickStep1 = () =>{
-        navigate('../step2')
+    const handleClickNextStep = () => {
+        
+        /* && (state.rg ==! '') && (state.birthday ==! '')  &&  (state.email ==! '')){ */
+        if(state.name === '' || state.rg === '' || state.birthday === ''  ||  state.email === ''){
+
+            alert(`Preencha todos os campos`);
+        }
+        else{
+            /* console.log(typeof(state.name));
+            console.log(typeof(''));
+            
+            console.log(String(state.name))
+            console.log('')
+            console.log(String(state.name) === '');
+            console.log(String(state.name) ==! '');
+            
+            console.log(String(state.name) === String(''));
+            console.log(String(state.name) ==! String(''));
+            
+            console.log(state.name === '');
+            console.log(state.name ==! ''); */
+            console.log(state)
+            navigate('../step2')
+        }
     }
 
     const handleChangeNome = (event) => {
@@ -26,7 +48,7 @@ const ProfessorStep1 = ()=>{
         dispatch({
             type: FormCadastroActions.setRg,
             payload: event.target.value
-        });
+       });
     };
 
     const handleChangeBirthday = (event) => {
@@ -47,7 +69,7 @@ const ProfessorStep1 = ()=>{
         <Fragment>
             <div>
 
-                <div onClick={()=> navigate('../..')}>
+                <div onClick={()=> navigate('/cadastro', {replace:true})}>
                     Anterior
                 </div>
 
@@ -55,6 +77,7 @@ const ProfessorStep1 = ()=>{
                     Nome
                     <input 
                         type='text' 
+                        value={state.name}
                         onChange={handleChangeNome}
                         />
                 </label>
@@ -62,6 +85,7 @@ const ProfessorStep1 = ()=>{
                     R.G
                     <input 
                     type='text' 
+                    value={state.rg}
                     onChange={handleChangeRg}
                     />
                 </label>
@@ -69,6 +93,7 @@ const ProfessorStep1 = ()=>{
                     Data de nascimento
                     <input 
                     type='date' 
+                    value={state.birthday}
                     onChange={handleChangeBirthday}
                     />
                 </label>
@@ -76,10 +101,11 @@ const ProfessorStep1 = ()=>{
                     Email
                     <input 
                     type='email'
+                    value={state.email}
                     onChange={handleChangeEmail}
                     />
                 </label>
-                <button onClick={handleClickStep1}>Próximo</button>
+                <button onClick={handleClickNextStep}>Próximo</button>
             </div>
         </Fragment>
     );

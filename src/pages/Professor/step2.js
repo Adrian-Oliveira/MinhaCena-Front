@@ -10,8 +10,17 @@ const ProfessorStep2 = ()=>{
 
     const {state, dispatch} = useCadastro();
 
-    const handleClickStep2 = () =>{
-        navigate('../step3')
+    const handleClickNextStep = () =>{
+        
+
+        if(state.schoolname === '' || state.city === '' || state.contact === ''){
+
+            alert(`Preencha todos os campos`);
+        }
+        else{
+            
+            navigate('../step3')
+        }
     }
 
     const handleChangeSchoolname = (event) => {
@@ -48,6 +57,7 @@ const ProfessorStep2 = ()=>{
                     Nome da escola 
                     <input 
                         type='text' 
+                        value={state.schoolname}
                         onChange={handleChangeSchoolname}
                         />
                 </label>
@@ -56,6 +66,7 @@ const ProfessorStep2 = ()=>{
                     Cidade 
                     <input 
                         type='text' 
+                        value={state.city}
                         onChange={handleChangeCity}
                         />
                 </label>
@@ -64,11 +75,12 @@ const ProfessorStep2 = ()=>{
                     Contato 
                     <input 
                         type='text' 
+                        value={state.contact}
                         onChange={handleChangeContact}
                         />
                 </label>
 
-                <button onClick={handleClickStep2}>Cadastrar</button>
+                <button onClick={handleClickNextStep}>Cadastrar</button>
             </div>
         </Fragment>
     );

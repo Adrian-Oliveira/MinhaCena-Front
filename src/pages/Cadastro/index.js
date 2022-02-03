@@ -21,7 +21,18 @@ const Cadastro = () => {
     const {state, dispatch } = useCadastro();
 
     const handleClickCadastro = () =>{
-        navigate('professor/step1')
+
+        if(state.profession === 'professor'){
+            
+            navigate('professor/step1')
+        }
+        else if(state.profession === 'ilustrador'){
+            navigate('ilustrador/step1')
+        }
+        else{
+            alert('Escolha uma opção para continuar')
+        }
+
     };
 
     const handleChange = (event) => {
