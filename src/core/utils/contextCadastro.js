@@ -12,7 +12,9 @@ const initialData = {
     email: '',
     schoolname: '',
     city:'',
-    contact: ''
+    contact: '',
+    portfolio: '',
+    socialnetwork: '',
 };
 
 //Reducer 
@@ -24,7 +26,9 @@ export const FormCadastroActions = {
     setEmail: 'email',
     setSchoolname: 'schoolname',
     setCity: 'city',
-    setContact: 'contact'
+    setContact: 'contact',
+    setPortfolio: 'portfolio',
+    setSocialNetwork: 'socialNetwork'
 };
 
 
@@ -56,6 +60,11 @@ const cadastroReducer = (state, action) =>{
         case FormCadastroActions.setContact:
             return {...state, contact:action.payload};
 
+        case FormCadastroActions.setPortfolio:
+            return {...state, portfolio:action.payload};
+
+        case FormCadastroActions.setSocialNetwork:
+            return {...state, socialnetwork:action.payload};
         default:
             return state;
     }
