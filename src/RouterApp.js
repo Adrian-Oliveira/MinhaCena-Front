@@ -37,15 +37,15 @@ const RouterApp = ()=>{
                     <Route path="cadastro" element={<Cadastro/>} >
                         
                         <Route path="professor" element={<Professor/>}>
-                        <Route path="step1" element={<ProfessorStep1/>} />
-                        <Route path="step2" element={<ProfessorStep2/>} />
-                        <Route path="step3" element={<ProfessorStep3/>} />
+                            <Route path="step1" element={<ProfessorStep1/>} />
+                            <Route path="step2" element={<ProfessorStep2/>} />
+                            <Route path="step3" element={<ProfessorStep3/>} />
                         </Route>
                         
                         <Route path="ilustrador" element={<Ilustrador/>}>
-                        <Route path="step1" element={<IlustradorStep1/>} />
-                        <Route path="step2" element={<IlustradorStep2/>} />
-                        <Route path="step3" element={<IlustradorStep3/>} />
+                            <Route path="step1" element={<IlustradorStep1/>} />
+                            <Route path="step2" element={<IlustradorStep2/>} />
+                            <Route path="step3" element={<IlustradorStep3/>} />
                         </Route>
                     </Route>   
 
@@ -62,25 +62,3 @@ const RouterApp = ()=>{
 
 export default RouterApp;
 
-{/* <BrowserRouter>
-            <Routes>
-
-                <Route path="/" element={<Home/>}/>
-
-                <Route path="cadastro" element={<Cadastro/>} >
-                    
-                    <Route path="professor" element={<Professor/>}>
-                    <Route path="step1" element={<ProfessorStep1/>} />
-                    <Route path="step2" element={<ProfessorStep2/>} />
-                    <Route path="step3" element={<ProfessorStep3/>} />
-                    </Route>
-                    
-                    <Route path="ilustrador" element={<Ilustrador/>}>
-                    <Route path="step1" element={<IlustradorStep1/>} />
-                    <Route path="step2" element={<IlustradorStep2/>} />
-                    <Route path="step3" element={<IlustradorStep3/>} />
-                    </Route>
-                </Route>   
-
-            </Routes>
-        </BrowserRouter> */}
