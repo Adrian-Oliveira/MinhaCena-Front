@@ -1,225 +1,8 @@
-@import url('https://github.com/googlefonts/Montserrat/tree/master/fonts/ttf');
-
-$font-main:'Montserrat', sans-serif;
 $text_color: #FAF9FA;
 
 
-.banne{
-    background-repeat: no-repeat;
-}
-
 .banner{
-    margin-top: 55.32px;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    color: $text_color;
-
-    
-    
-    .title{
-        font-family:$font-main;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 54px;
-        line-height: 66px;
-
-        /* identical to box height */
-        text-align: center;
-        -webkit-text-stroke-color: black;
-        -webkit-text-stroke-width: 1px;
-    }
-
-    .subtitle{
-        margin-top: 8px;
-        font-family: $font-main;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 32px;
-        line-height: 39px;
-
-        /* -webkit-text-stroke: 1px #000000; */
-        -webkit-text-stroke: 1.1px black;
-        
-    }
-
-    button{
-        margin-top: 32px;
-        justify-content: center;
-        align-items: center;
-        padding: 16px 34px;
-        width: 384px;
-        height: 52px;
-
-        /* text */
-        font-family: $font-main;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 20px;
-
-        /* identical to box height */
-        text-align: center;
-
-        /* brand/branco */
-        color: $text_color;
-
-
-        /* brand/gradient */
-        background: linear-gradient(135deg, #FD6585 0%, #0D25B9 100%);
-        border: 1px solid #000000;
-        box-sizing: border-box;
-        box-shadow: 0px 8px 24px rgba(168, 78, 151, 0.15);
-        border-radius: 16px;
-    }
-
-}
-.banerImage{
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-}
-
-.aboutUs{
-    h2{
-
-        font-family: $font-main;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 49px;
-        
-        /* identical to box height */
-        text-align: center;
-
-        /* Grey / 600 */
-        color: #33303E;
-    }
-
-    p{
-        font-family: $font-main;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 30px;
-
-        /* or 167% */
-        letter-spacing: 0.03em;
-
-        /* Grey / 600 */
-        color: #33303E;
-    }
-
-    .logo{
-        display: grid;
-        width: 592px;
-        align-items: center;
-        justify-content: center;
-
-        /* brand/gradient */
-        background: linear-gradient(135deg, #FD6585 0%, #0D25B9 100%);
-        box-shadow: 0px 8px 24px rgba(168, 78, 151, 0.2);
-        border-radius: 32px;
-
-        img{
-            justify-self: center;
-            align-self: center;
-        }
-    }
-}
-
-.helpUs{
-
-    h2{
-
-        font-family: $font-main;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 49px;
-        
-        /* identical to box height */
-        text-align: center;
-
-        /* Grey / 600 */
-        color: #33303E;
-    }
-
-    h3{
-        font-family: $font-main;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 32px;
-        line-height: 39px;
-
-        /* identical to box height */
-        text-align: center;
-
-        /* Grey / 600 */
-        color: #33303E;
-    }
-
-    p{
-        /* body/medium/18-30 */
-        font-family: $font-main;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 30px;
-
-        /* or 167% */
-        text-align: center;
-        letter-spacing: 0.03em;
-
-        /* Grey / 600 */
-        color: #33303E;
-    }
-
-    button{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 16px 34px;
-        /* brand */
-        box-shadow: 0px 8px 24px rgba(13, 37, 185, 0.15);
-        border-radius: 16px;
-
-        top: 16px;
-
-        font-family: $font-main;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 20px;
-
-        /* identical to box height */
-        text-align: center;
-
-        /* brand/branco */
-        color: #FAF9FA;
-
-
-        /* Inside Auto Layout */
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        margin: 0px 10px;
-    }
-
-    .professor{
-        button{
-            background: #0D25B9;
-        }
-    }
-    .illustrator{
-        button{
-            background: #A84E97;
-        }
-    }
+    position: relative;
 }
 
 header{
@@ -236,6 +19,7 @@ header{
     left: 5.5%;
     top: 16px;
     
+    z-index: 2;
 
     /* brand/branco */
     color: $text_color;
@@ -297,6 +81,216 @@ header{
     
 }
 
+.bannerContent{
+    position: relative;
+    
+    margin-top: 55.32px;
+    width: 100%;
+
+    z-index: 2;
+    
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: $text_color;
+
+    .title{
+        
+        font-style: normal;
+        font-weight: bold;
+        font-size: 54px;
+        line-height: 66px;
+
+        /* identical to box height */
+        text-align: center;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 1px;
+    }
+
+    .subtitle{
+        margin-top: 8px;
+         
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 39px;
+
+        /* -webkit-text-stroke: 1px #000000; */
+        -webkit-text-stroke: 1.1px black;
+        
+    }
+
+    button{
+        margin-top: 32px;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 34px;
+        width: 384px;
+        height: 52px;
+
+        /* text */
+         
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+
+        /* identical to box height */
+        text-align: center;
+
+        /* brand/branco */
+        color: $text_color;
+
+
+        /* brand/gradient */
+        background: linear-gradient(135deg, #FD6585 0%, #0D25B9 100%);
+        border: 1px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 8px 24px rgba(168, 78, 151, 0.15);
+        border-radius: 16px;
+    }
+
+}
+
+.aboutUs{
+    h2{
+
+         
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 49px;
+        
+        /* identical to box height */
+        text-align: center;
+
+        /* Grey / 600 */
+        color: #33303E;
+    }
+
+    p{
+         
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+
+        /* or 167% */
+        letter-spacing: 0.03em;
+
+        /* Grey / 600 */
+        color: #33303E;
+    }
+
+    .logo{
+        display: grid;
+        width: 592px;
+        align-items: center;
+        justify-content: center;
+
+        /* brand/gradient */
+        background: linear-gradient(135deg, #FD6585 0%, #0D25B9 100%);
+        box-shadow: 0px 8px 24px rgba(168, 78, 151, 0.2);
+        border-radius: 32px;
+
+        img{
+            justify-self: center;
+            align-self: center;
+        }
+    }
+}
+
+.helpUs{
+
+    h2{
+
+         
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 49px;
+        
+        /* identical to box height */
+        text-align: center;
+
+        /* Grey / 600 */
+        color: #33303E;
+    }
+
+    h3{
+         
+        font-style: normal;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 39px;
+
+        /* identical to box height */
+        text-align: center;
+
+        /* Grey / 600 */
+        color: #33303E;
+    }
+
+    p{
+        /* body/medium/18-30 */
+         
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+
+        /* or 167% */
+        text-align: center;
+        letter-spacing: 0.03em;
+
+        /* Grey / 600 */
+        color: #33303E;
+    }
+
+    button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 34px;
+        /* brand */
+        box-shadow: 0px 8px 24px rgba(13, 37, 185, 0.15);
+        border-radius: 16px;
+
+        top: 16px;
+
+         
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+
+        /* identical to box height */
+        text-align: center;
+
+        /* brand/branco */
+        color: #FAF9FA;
+
+
+        /* Inside Auto Layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 0px 10px;
+    }
+
+    .professor{
+        button{
+            background: #0D25B9;
+        }
+    }
+    .illustrator{
+        button{
+            background: #A84E97;
+        }
+    }
+}
+
 footer{
     position:relative;
     display: grid;
@@ -311,7 +305,7 @@ footer{
 
 
     p{
-        font-family: $font-main;
+         
         font-style: normal;
         font-weight: bold;
         font-size: 24px;
@@ -337,7 +331,7 @@ footer{
         border-radius: 16px;
 
 
-        font-family: $font-main;
+         
         font-style: normal;
         font-weight: bold;
         font-size: 16px;

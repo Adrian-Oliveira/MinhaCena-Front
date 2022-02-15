@@ -1,6 +1,6 @@
-import React,{Fragment} from 'react'
+import React,{Fragment, useEffect, useState} from 'react'
 
-import bannerHome from '../../core/assets/img/bannerHome.png'
+import bannerHomeImage from '../../core/assets/img/bannerHome.png'
 import logo from '../../core/assets/icons/logo.png'
 import logo1 from '../../core/assets/icons/logo_minhacena1.png'
 
@@ -11,17 +11,19 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
 
-    
+    /* Proproção da imagem de fundo é 679/1366*/
+    let heightBanner = (679/1366)*screen.availWidth;
 
     return( 
 
         <Fragment>  
-
-        <div className='banne' style={{
-            backgroundImage: `url(${bannerHome})`,
+        <div className='banner' style={{
+            backgroundImage: `url(${bannerHomeImage})`,
             backgroundSize: '100%',
             backgroundRepeat:'no-repeat',
-        }} >
+            height: heightBanner
+        }}>
+            
 
             <header>
                 <img className='logo' src={logo} />
@@ -33,7 +35,7 @@ const Home = () => {
                 <button>Entrar</button>
             </header>
 
-            <div className='banner'>
+            <div className='bannerContent'>
 
                 <h1 className='title'>
                     MinhaCena.org
