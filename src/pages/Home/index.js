@@ -55,7 +55,7 @@ const Home = () => {
 
         <section className='aboutUs'>
             <h2> Quem somos </h2>
-            <p>
+            <p >
                 O MinhaCena.Org propõe ser uma ferramenta de impacto social no desenvolvimento educacional,
                estímulo e melhora na escrita, leitura, criação e produção de arte e cultura por parte dos alunos.
                A plataforma conecta professores, que cadastram redações de seus melhores alunos que serão revisadas

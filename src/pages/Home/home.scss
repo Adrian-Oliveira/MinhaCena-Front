@@ -96,12 +96,13 @@ header{
 
     .title{
         
+        font-family: 'Montserrat-Bold';
         font-style: normal;
         font-weight: bold;
         font-size: 54px;
         line-height: 66px;
 
-        /* identical to box height */
+        
         text-align: center;
         -webkit-text-stroke-color: black;
         -webkit-text-stroke-width: 1px;
@@ -109,9 +110,10 @@ header{
 
     .subtitle{
         margin-top: 8px;
-         
-        font-style: normal;
-        font-weight: 500;
+        
+        font-family: 'Montserrat-Bold';
+        font-style: bold;
+        font-weight: bold;
         font-size: 32px;
         line-height: 39px;
 
@@ -127,9 +129,10 @@ header{
         padding: 16px 34px;
         width: 384px;
         height: 52px;
+        
+        cursor: pointer;
 
-        /* text */
-         
+        /* text */ 
         font-style: normal;
         font-weight: bold;
         font-size: 16px;
@@ -141,6 +144,7 @@ header{
         /* brand/branco */
         color: $text_color;
 
+        
 
         /* brand/gradient */
         background: linear-gradient(135deg, #FD6585 0%, #0D25B9 100%);
@@ -153,9 +157,22 @@ header{
 }
 
 .aboutUs{
-    h2{
 
-         
+    display: grid;
+
+    grid-template-columns: [first] 1fr [line2] 32px [line3] 1fr [end];
+    grid-template-areas: 
+      "title title title"
+      "content . logo ";
+
+
+    margin-top: 81px;
+    margin-left: 75px;
+    margin-right: 75px;
+    h2{
+        grid-area: title;
+        
+        font-family: 'Montserrat-Bold';
         font-style: normal;
         font-weight: bold;
         font-size: 40px;
@@ -169,7 +186,8 @@ header{
     }
 
     p{
-         
+        grid-area: content;
+
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
@@ -183,8 +201,10 @@ header{
     }
 
     .logo{
+        grid-area: logo;
+
         display: grid;
-        width: 592px;
+        /* width: 592px; */
         align-items: center;
         justify-content: center;
 
@@ -204,7 +224,7 @@ header{
 
     h2{
 
-         
+        font-family: 'Montserrat-Bold';
         font-style: normal;
         font-weight: bold;
         font-size: 40px;
@@ -218,7 +238,7 @@ header{
     }
 
     h3{
-         
+        font-family: 'Montserrat-Bold';
         font-style: normal;
         font-weight: bold;
         font-size: 32px;
