@@ -62,6 +62,7 @@ const Home = () => {
                e adaptadas em quadrinhos, que poderão ser publicadas ou impressas. O intuito do projeto 
                é fazer com que, de forma pedagógica, essas ilustrações estimulem esses jovens a terem mais 
                interesse em leitura, escrita, redação, ilustração e desenvolvimento na interpretação de texto. 
+               <br/>
                Bem-vindo ao MinhaCena.Org! 
             </p>
 
@@ -72,20 +73,24 @@ const Home = () => {
         </section>
 
         <section className='helpUs'>
+
+            <div></div>
             <h2>Como fazer parte</h2>
 
             <div className='illustrator'>
                 <h3 >Ilustrador</h3>
+                
                 <p>Como ilustrador, você pode contribuir adotando uma redação para criar suas
                     ilustrações incríveis, gerarando conteúdo para seu portfolio e dar vida a
-                    redação de um aluno(a).</p>
+                    redação de um aluno(a).
+                </p>
                 
-                    
-
-                    <button>Quero ilustrar</button>    
+                <button>Quero ilustrar</button>    
                 
             </div>
             
+            <div className='verticalBar'></div>
+
             <div className='professor'>
                 <h3>Professor</h3>
                 <p>Como professor, você seleciona as melhores redações de seus alunos(as) e 
