@@ -1,8 +1,9 @@
-import React,{Fragment, useEffect, useState} from 'react'
+import React,{Fragment} from 'react';
 
-import bannerHomeImage from '../../core/assets/img/bannerHome.png'
-import logo from '../../core/assets/icons/logo.png'
-import logo1 from '../../core/assets/icons/logo_minhacena1.png'
+import logo from '../../core/assets/icons/logo.png';
+import logo1 from '../../core/assets/icons/logo_minhacena2.png';
+import emailImg from '../../core/assets/icons/email.png';
+import instaImg from '../../core/assets/icons/instagram.png';
 
 import './home.scss'
 
@@ -18,9 +19,6 @@ const Home = () => {
 
         <Fragment>  
         <div className='banner' style={{
-            backgroundImage: `url(${bannerHomeImage})`,
-            backgroundSize: '100%',
-            backgroundRepeat:'no-repeat',
             height: heightBanner
         }}>
             
@@ -101,13 +99,14 @@ const Home = () => {
         </section>
         
         <footer>
+
+
             <p>Venha fazer parte deste movimento</p>
-            <button> Quero fazer parte </button>
-            <section className='socialMedia'>
-                <a className='home'></a>
-                <a className='email'></a>
-                <a className='instagram'></a>
-            </section>
+            <button> <div>    Quero fazer parte   </div> </button>
+
+            <a className='logoFooter'> <img src={logo1} /></a>
+            <a className='emailFooter'> <img src={emailImg} /></a>
+            <a className='instaFooter'> <img src={instaImg} /></a>
         </footer>
 
     </Fragment>

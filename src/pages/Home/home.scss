@@ -3,6 +3,9 @@ $text_color: #FAF9FA;
 
 .banner{
     position: relative;
+    background-image: url('../../core/assets/img/bannerHome.png'),;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 header{
@@ -18,13 +21,9 @@ header{
     height: 68.68px;
     left: 5.5%;
     top: 16px;
-    
-    z-index: 2;
 
-    /* brand/branco */
     color: $text_color;
 
-    /* text */
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
@@ -47,8 +46,6 @@ header{
         top: 0%;
         bottom: 0%;
 
-
-        /* Inside Auto Layout */
         flex: none;
         order: 0;
         flex-grow: 0;
@@ -62,19 +59,15 @@ header{
         height: 100%;
         
         border: 2px solid #FAF9FA;
-        box-sizing: border-box;
         border-radius: 16px;
         
-        
-        font-family: 'Montserrat';
+        font-family: 'Montserrat-Bold';
         font-weight: 700;
         font-size: 16px;
         line-height: 20px;
         
-        /* identical to box height */
         text-align: center;
         
-        /* brand/branco */
         color: $text_color;
         
     }
@@ -117,7 +110,7 @@ header{
         font-size: 32px;
         line-height: 39px;
 
-        /* -webkit-text-stroke: 1px #000000; */
+        
         -webkit-text-stroke: 1.1px black;
         
     }
@@ -132,21 +125,15 @@ header{
         
         cursor: pointer;
 
-        /* text */ 
+        font-family: 'Montserrat-Bold';
         font-style: normal;
-        font-weight: bold;
         font-size: 16px;
         line-height: 20px;
 
-        /* identical to box height */
         text-align: center;
 
-        /* brand/branco */
         color: $text_color;
 
-        
-
-        /* brand/gradient */
         background: linear-gradient(135deg, #FD6585 0%, #0D25B9 100%);
         border: 1px solid #000000;
         box-sizing: border-box;
@@ -172,33 +159,29 @@ header{
     h2{
         grid-area: title;
         
+
         font-family: 'Montserrat-Bold';
         font-style: normal;
         font-weight: bold;
         font-size: 40px;
         line-height: 49px;
         
-        /* identical to box height */
         text-align: center;
 
-        /* Grey / 600 */
         color: #33303E;
     }
 
     p{
         grid-area: content;
         
-        
-        
+
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
         line-height: 30px;
 
-        /* or 167% */
         letter-spacing: 0.03em;
 
-        /* Grey / 600 */
         color: #33303E;
     }
 
@@ -207,11 +190,11 @@ header{
 
         max-height: 400px;
         display: grid;
-        /* width: 592px; */
+        
         align-items: center;
         justify-content: center;
 
-        /* brand/gradient */
+        
         background: linear-gradient(135deg, #FD6585 0%, #0D25B9 100%);
         box-shadow: 0px 8px 24px rgba(168, 78, 151, 0.2);
         border-radius: 32px;
@@ -223,9 +206,9 @@ header{
     }
 }
 
+
 .helpUs{
     
-
     margin-top: 20px;
 
     padding-left: 75px;
@@ -239,8 +222,6 @@ header{
         "title title title"
         "illustrator verticalBar professor";
     
-    
-    
     h2{
         grid-area: title;
 
@@ -253,10 +234,8 @@ header{
         font-size: 40px;
         line-height: 49px;
         
-        /* identical to box height */
         text-align: center;
 
-        /* Grey / 600 */
         color: #33303E;
     }
 
@@ -266,7 +245,7 @@ header{
         padding-right: 16px;
         padding-left: 16px;
 
-        /* border-right: 1px solid #C6C5CE; */
+        
         
         button{
             background: #A84E97;
@@ -280,7 +259,7 @@ header{
         width: 0px;
 
 
-        /* Grey / 200 */
+        
         border: 1px solid #C6C5CE;
     }
 
@@ -324,11 +303,11 @@ header{
             font-size: 18px;
             line-height: 30px;
 
-            /* or 167% */
+            
             text-align: center;
             letter-spacing: 0.03em;
 
-            /* Grey / 600 */
+            
             color: #33303E;
         }
         button{
@@ -340,10 +319,11 @@ header{
             line-height: 20px;
             align-self: center;
             justify-self: center;
-            /* identical to box height */
+
+            
             text-align: center;
 
-            /* brand/branco */
+            
             color: #FAF9FA;
 
             width: 384px;
@@ -360,17 +340,20 @@ header{
 footer{
     position:relative;
     display: grid;
+    
+    justify-items: center;
+    
     width: 100%;
     height: 313px;
     bottom: 0%;
-    /* brand/gradient */
+    
+    
     background: linear-gradient(135deg, #FD6585 0%, #0D25B9 100%);
 
-    align-content: center;
-    justify-content: center;
 
 
     p{
+        align-self: end;
         font-family: 'Montserrat-Bold'; 
         font-style: normal;
         font-weight: bold;
@@ -378,43 +361,59 @@ footer{
         line-height: 29px;
         text-align: center;
 
-        /* brand/branco */
+        
         color: #FAF9FA;
     }
 
     button{
-        font-family: 'Montserrat-Bold';
-        justify-self: center;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+    
+        width: 384px;
+        height: 52px;
+    
+        margin-top: 24px;
         padding: 16px 34px;
 
-        /* brand/branco */
+        display: grid;
+        justify-items: center;
+
         background: #FAF9FA;
         box-shadow: 0px 8px 24px rgba(250, 249, 250, 0.15);
         border-radius: 16px;
 
-
-         
         font-style: normal;
         font-weight: bold;
-        font-size: 16px;
-        line-height: 20px;
-
-        /* identical to box height */
         text-align: center;
 
-        /* Inside Auto Layout */
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        margin: 0px 10px;
+        div{
+            font-family: 'Montserrat-Bold';
+            font-size: 16px;
+            line-height: 20px;
+
+            background: linear-gradient(135deg, #FD6585 0%, #0D25B9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
     }
 
-    .socialMedia{
-        color: red;
+    .logoFooter{
+        position: absolute;
+
+        right: 63px;
+        bottom: 71px;
+    }
+
+    .emailFooter{
+        position: absolute;
+        right: 152px;
+        bottom: 17px;
+        
+    }
+
+    .instaFooter{
+        position: absolute;
+        right: 75px;
+        bottom: 32px;
+
     }
 }
