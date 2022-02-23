@@ -1,7 +1,8 @@
 import React,{Fragment} from 'react';
 
 import logo from '../../core/assets/icons/logo.png';
-import logo1 from '../../core/assets/icons/logo_minhacena2.png';
+import logo1 from '../../core/assets/icons/logo1.png';
+import logo2 from '../../core/assets/icons/logo_minhacena2.png';
 import emailImg from '../../core/assets/icons/email.png';
 import instaImg from '../../core/assets/icons/instagram.png';
 
@@ -52,7 +53,13 @@ const Home = () => {
         </div>
 
         <section className='aboutUs'>
-            <h2> Quem somos </h2>
+
+          
+            <div className='upLine'></div>
+            <h2>Quem somos</h2>
+            <div className='downLine'></div>
+
+
             <p >
                 O MinhaCena.Org propõe ser uma ferramenta de impacto social no desenvolvimento educacional,
                estímulo e melhora na escrita, leitura, criação e produção de arte e cultura por parte dos alunos.
@@ -72,8 +79,10 @@ const Home = () => {
 
         <section className='helpUs'>
 
-            <div></div>
+            <div className='upLine'></div>
             <h2>Como fazer parte</h2>
+            <div className='downLine'></div>
+
 
             <div className='illustrator'>
                 <h3 >Ilustrador</h3>
@@ -104,7 +113,7 @@ const Home = () => {
             <p>Venha fazer parte deste movimento</p>
             <button> <div>    Quero fazer parte   </div> </button>
 
-            <a className='logoFooter'> <img src={logo1} /></a>
+            <a className='logoFooter'> <img src={logo2} /></a>
             <a className='emailFooter'> <img src={emailImg} /></a>
             <a className='instaFooter'> <img src={instaImg} /></a>
         </footer>

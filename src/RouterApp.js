@@ -23,7 +23,6 @@ import IlustradorStep3 from './pages/Ilustrador/step3';
 import { CadastroProvider } from './core/utils/contextCadastro';
 
 
-
 const RouterApp = ()=>{
 
     return(

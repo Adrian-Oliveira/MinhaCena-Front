@@ -147,18 +147,35 @@ header{
 
     display: grid;
 
-    grid-template-columns: [first] 1fr [line2] 32px [line3] 1fr [end];
-    grid-template-areas: 
-      "title title title"
-      "content . logo ";
+    grid-template-columns: [first] 1fr [line2] auto [line3] 32px [line4] auto [line5] 1fr [end];
+    grid-template-areas:
+      ". upLine . . ."
+      ". title title title ."
+      ". . . downLine ."     
+      "content content . logo logo";
 
-    
     margin-top: 81px;
     margin-left: 75px;
     margin-right: 75px;
+
+    .upLine{
+        grid-area: upLine;
+        justify-self: left;
+        width: 103px;
+        height: 0px;
+
+        border: 1px solid #A84E97;
+    }
+    .downLine{
+        grid-area: downLine;
+        justify-self: right;
+        width: 103px;
+        height: 0px;
+
+        border: 1px solid  #0D25B9;;
+    }
     h2{
         grid-area: title;
-        
 
         font-family: 'Montserrat-Bold';
         font-style: normal;
@@ -174,6 +191,7 @@ header{
     p{
         grid-area: content;
         
+        margin-top: 42px;
 
         font-style: normal;
         font-weight: 500;
@@ -188,6 +206,8 @@ header{
     .logo{
         grid-area: logo;
 
+        margin-top: 42px;
+        
         max-height: 400px;
         display: grid;
         
@@ -217,16 +237,42 @@ header{
     background-image: url('../../core/assets/img/helpUsBackground.png');
     
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 1fr auto auto auto 1fr;
     grid-template-areas:
-        "title title title"
-        "illustrator verticalBar professor";
+        ". upLine . . ."
+        ". title title title ."
+        ". . . downLine ."
+        "illustrator illustrator verticalBar professor professor";
+
+    
+    .upLine{
+        grid-area: upLine;
+
+        margin-top: 171px;
+
+        justify-self: left;
+        width: 103px;
+        height: 0px;
+
+        border: 1px solid #A84E97;
+    }
+    .downLine{
+        grid-area: downLine;
+        margin-top: 8px;
+        margin-bottom: 39px; 
+
+        justify-self: right;
+        width: 103px;
+        height: 0px;
+
+        border: 1px solid  #0D25B9;;
+    }
     
     h2{
         grid-area: title;
 
-        margin-top: 171px;
-        margin-bottom: 39px;        
+        
+               
         
         font-family: 'Montserrat-Bold';
         font-style: normal;
@@ -242,9 +288,6 @@ header{
     .illustrator{
         grid-area: illustrator;
 
-        padding-right: 16px;
-        padding-left: 16px;
-
         
         
         button{
@@ -257,7 +300,8 @@ header{
         grid-area: verticalBar;
         height: 305px;
         width: 0px;
-
+        
+        justify-self: center;
 
         
         border: 1px solid #C6C5CE;
@@ -265,10 +309,6 @@ header{
 
     .professor{        
         grid-area: professor;
-
-        padding-right: 16px;
-        padding-left: 16px;
-
         button{
             background: #0D25B9;
             box-shadow: 0px 8px 24px rgba(13, 37, 185, 0.15);
