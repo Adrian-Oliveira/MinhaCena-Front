@@ -7,9 +7,10 @@
 
 /* @import url('https://github.com/googlefonts/Montserrat/tree/master/fonts/ttf'); */
 
-@include font('Montserrat', './fonts/Montserrat/ttf/Montserrat-Regular');
+/* @include font('Montserrat', './fonts/Montserrat/ttf/Montserrat-Regular'); */
 @include font('Montserrat-bold', './fonts/Montserrat/ttf/Montserrat-Bold');
 
+@include font('Montserrat', './fonts/Montserrat/variable/Montserrat[wght]');
 
 *{
     font-family: 'Montserrat', sans-serif;

@@ -115,7 +115,7 @@ const Home = () => {
 
             <a className='logoFooter'> <img src={logo2} /></a>
             <a className='emailFooter'> <img src={emailImg} /></a>
-            <a className='instaFooter'> <img src={instaImg} /></a>
+            <a className='instaFooter' target='_blank' href='https://www.instagram.com/projetominhacena/'> <img src={instaImg} /></a>
         </footer>
 
     </Fragment>

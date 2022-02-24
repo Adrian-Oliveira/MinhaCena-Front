@@ -2,9 +2,10 @@ import React, {Fragment} from "react";
 import { Outlet, useNavigate, useLocation, Link } from "react-router-dom";
 
 import imgCadastro from '../../core/assets/img/imagem_cadastro.png'
-import logoCadastro from '../../core/assets/icons/logo_cadastro.png'
+import backArrow from '../../core/assets/icons/backArrow.png';
+import logoCadastro from '../../core/assets/icons/logo_cadastro.png';
 
-import './cadastro.scss'
+import './cadastro.scss';
 
 import Professor from "../Professor";
 import Ilustrador from "../Ilustrador";
@@ -52,7 +53,7 @@ const Cadastro = () => {
                         Redação ilustrada
                     </h2>
                     <p>
-                        Bem-vindo(a), o MinhaCena.Org é uma organização sem fins lucrativos,
+                        Bem-vindo(a), o MinhaCena.Org é uma organização sem fins lucrativos,
                         que conecta professores de Português e Artes à Ilustradores voluntários.
                     </p>
                 </div>
@@ -62,24 +63,30 @@ const Cadastro = () => {
 
                         {(location.pathname === "/cadastro") &&
                             <Fragment>
-                                <Link to='/'>
-                                    Anterior
-                                </Link>
-                                <label >
-                                    Fazer cadastro como:{state.profession}
-                                    <br/>
 
-                                    <label>
-                                    Professor(a):
+                                <Link className="backArrow" to='/'>
+                                    <img src={backArrow} />
+                                </Link>
+
+                                <img className="logo" src={logoCadastro} />
+
+                                <label className="form" >
+                                    <h2>
+                                        Fazer cadastro como:
+                                    </h2>
+                                    
+
+                                    <label className="checkedProfessor">
+                                        <span>Professor(a):</span>
                                         <input 
+                                            className="professor"
                                             type="radio" 
                                             value="professor" 
                                             checked = {state.profession === "professor"}
                                             onChange={handleChange} 
                                             /> 
                                     </label>
-                                    <br/>
-
+                                    
                                     <label>
                                     Ilustrador(a):    
                                         <input 
@@ -91,7 +98,16 @@ const Cadastro = () => {
                                     </label>
 
 
-                                    <button onClick={handleClickCadastro}>Próximo</button>
+                                    <button style={state.profession === "professor"?
+                                                 {background:"#0D25B9"}
+                                                 :state.profession === "ilustrador"?
+                                                 {background:"#A84E97"}:
+                                                 {background:"##C6C5CE"}
+                                                 }
+                                            onClick={handleClickCadastro}>
+
+                                        Próximo
+                                    </button>
                                 </label>
                             </Fragment>
                         }

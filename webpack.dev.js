@@ -31,15 +31,6 @@ module.exports = () => ({
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
-      /* {
-        test: /\.svg$/,
-        use: ['@svgr/webpack', 'file-loader']
-      },
-      {
-        test: /\.(jpeg|jpg|ttf|woff|png|wav|ico)$/,
-        loader: 'file-loader'
-      }, */
-
       {
         test: /\.(jpe?g|svg|png|gif|ico|eot|ttf|woff2?)(\?v=\d+\.\d+\.\d+)?$/i,
         type: 'asset/resource',
