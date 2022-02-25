@@ -37,7 +37,7 @@ const Home = () => {
             <div className='bannerContent'>
 
                 <h1 className='title'>
-                    MinhaCena.org
+                    MinhaCena.Org
                 </h1>
                 
                 <div className='subtitle'>
@@ -61,14 +61,15 @@ const Home = () => {
 
 
             <p >
-                O MinhaCena.Org propõe ser uma ferramenta de impacto social no desenvolvimento educacional,
-               estímulo e melhora na escrita, leitura, criação e produção de arte e cultura por parte dos alunos.
-               A plataforma conecta professores, que cadastram redações de seus melhores alunos que serão revisadas
-               e adaptadas em quadrinhos, que poderão ser publicadas ou impressas. O intuito do projeto 
-               é fazer com que, de forma pedagógica, essas ilustrações estimulem esses jovens a terem mais 
-               interesse em leitura, escrita, redação, ilustração e desenvolvimento na interpretação de texto. 
-               <br/>
-               Bem-vindo ao MinhaCena.Org! 
+            O MinhaCena.Org é uma ferramenta de impacto social e educacional,
+            que propõe estímulo para melhora na escrita,
+            leitura e produção de arte por parte de alunos de escolas publicas,
+            privadas e ONGs de contraturno escolar. A plataforma conecta professores de Portugues
+            e Artes, que cadastram redações de seus alunos que são revisadas e adaptadas em quadrinhos
+            por nossa comunidade de ilustradores voluntarios, trazendo visibilidade aos artistas e 
+            dando suporte a forma pedagogica que o professor leciona em seus projetos. O MinhaCena.Org
+            é uma das metodologias ativas voltadas ao ensino hibrido e tecnologia,
+               fazendo do aluno o protagonista no seu aprendizado.Faça Parte!
             </p>
 
             <div className='logo'>
