@@ -55,6 +55,91 @@
         }
 
     }
+    .formCadastro{
+        grid-area: form;
+    }
+    .inicialStep{
+        display: grid;
+        grid-template-columns: 136px 384px auto;
+        grid-template-areas: 
+        "arrow form .";
+
+        .backArrow{
+            grid-area: arrow;
+            width: fit-content;
+            height: fit-content;
+            margin-top: 28px;
+            margin-left: 25px;
+
+        }
+
+        .form{
+            grid-area: form;
+ 
+            display: flexbox;            
+            text-align: center;
+
+            .logo{
+                margin-top: 24px;
+            }
+            
+            h2{
+                margin-top: 42px;
+
+                text-align: left;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 29px;
+                
+                color: #33303E;
+            }
+            .checkedProfessor,.checkedIlustrador{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 22px;
+                
+                border-bottom: 1px solid #C6C5CE;
+                padding-bottom: 24px;
+
+                color: #33303E;
+            }
+
+            .checkedProfessor{
+                margin-top: 34px;
+            }
+
+            .checkedIlustrador{
+                margin-top: 54px;
+            }
+
+            button{
+                margin-top: 44px;
+                width: 100%;
+                padding: 16px 34px;
+
+                box-shadow: 0px 8px 24px rgba(250, 249, 250, 0.15);
+                border-radius: 16px;
+
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 20px;
+
+                color: #FAF9FA;
+                &:hover{
+                    cursor: pointer;
+                }
+
+
+            }
+            
+
+        }
+
+    }
 
     
 }

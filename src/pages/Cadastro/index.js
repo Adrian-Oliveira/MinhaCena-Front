@@ -59,59 +59,61 @@ const Cadastro = () => {
                 </div>
 
                 <div className="formCadastro">
-                    <div className="inicialStep">
 
-                        {(location.pathname === "/cadastro") &&
-                            <Fragment>
+                    {(location.pathname === "/cadastro") &&
+                        <div className="inicialStep">
 
-                                <Link className="backArrow" to='/'>
-                                    <img src={backArrow} />
-                                </Link>
+                            <Link className="backArrow" to='/'>
+                                <img src={backArrow} />
+                            </Link>
 
+                            <div className="form">
                                 <img className="logo" src={logoCadastro} />
-
-                                <label className="form" >
-                                    <h2>
-                                        Fazer cadastro como:
-                                    </h2>
+                                
+                                <h2>
+                                    Fazer cadastro como:
+                                </h2>
                                     
 
-                                    <label className="checkedProfessor">
-                                        <span>Professor(a):</span>
-                                        <input 
-                                            className="professor"
-                                            type="radio" 
-                                            value="professor" 
-                                            checked = {state.profession === "professor"}
-                                            onChange={handleChange} 
-                                            /> 
-                                    </label>
-                                    
-                                    <label>
+                                <div className="checkedProfessor">
+                                    Professor(a):
+                                    <input 
+                                        className="professor"
+                                        type="radio" 
+                                        value="professor" 
+                                        checked = {state.profession === "professor"}
+                                        onChange={handleChange} 
+                                        /> 
+                                </div>
+                                
+                                <div className="checkedIlustrador">
+
                                     Ilustrador(a):    
-                                        <input 
-                                            type="radio"
-                                            value="ilustrador"
-                                            checked = {state.profession === "ilustrador"}
-                                            onChange={handleChange} 
-                                            /> 
-                                    </label>
+                                    <input 
+                                        type="radio"
+                                        value="ilustrador"
+                                        checked = {state.profession === "ilustrador"}
+                                        onChange={handleChange} 
+                                        /> 
+                                </div>
 
 
-                                    <button style={state.profession === "professor"?
-                                                 {background:"#0D25B9"}
-                                                 :state.profession === "ilustrador"?
-                                                 {background:"#A84E97"}:
-                                                 {background:"##C6C5CE"}
-                                                 }
-                                            onClick={handleClickCadastro}>
+                                <button style={state.profession === "professor"?
+                                                {background:"#0D25B9"}
+                                                :state.profession === "ilustrador"?
+                                                {background:"#A84E97"}:
+                                                {background:"##C6C5CE"}
+                                                }
+                                        onClick={handleClickCadastro}>
 
-                                        Próximo
-                                    </button>
-                                </label>
-                            </Fragment>
-                        }
-                    </div>    
+                                    Próximo
+                                </button>
+                                
+                            </div>
+                            
+                            
+                        </div>    
+                    }
                     
                     <Outlet/>
 
