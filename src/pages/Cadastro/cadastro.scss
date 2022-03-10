@@ -93,10 +93,62 @@
                 
                 color: #33303E;
             }
+
+            input{
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+
+            .checkedProfessor input:checked ~ .checkmark {        
+                border: 3.5px solid #0D25B9;
+            }
+
+            .checkedIlustrador input:checked ~ .checkmark {
+                border: 3.5px solid #A84E97;
+            }
+            
+            .checkmark{
+                display: grid;
+                height: 34px;
+                width: 34px;
+                border-radius: 50%;
+                border: 3.5px solid #7A7786;
+            }
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+            input:checked ~ .checkmark:after {
+                display: grid;
+
+            }
+            
+            .checkedProfessor .checkmark:after {
+                align-self: center;
+                justify-self: center;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background: #0D25B9;
+            }
+
+            .checkedIlustrador .checkmark:after {
+                align-self: center;
+                justify-self: center;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background: #A84E97;
+            }
+
             .checkedProfessor,.checkedIlustrador{
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+
+                cursor: pointer;
 
                 font-weight: bold;
                 font-size: 18px;

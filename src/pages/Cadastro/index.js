@@ -75,8 +75,10 @@ const Cadastro = () => {
                                 </h2>
                                     
 
-                                <div className="checkedProfessor">
+                                <label className="checkedProfessor">
                                     Professor(a):
+                                    
+                                    
                                     <input 
                                         className="professor"
                                         type="radio" 
@@ -84,9 +86,10 @@ const Cadastro = () => {
                                         checked = {state.profession === "professor"}
                                         onChange={handleChange} 
                                         /> 
-                                </div>
+                                    <span className="checkmark"></span>
+                                </label>
                                 
-                                <div className="checkedIlustrador">
+                                <label className="checkedIlustrador">
 
                                     Ilustrador(a):    
                                     <input 
@@ -94,8 +97,10 @@ const Cadastro = () => {
                                         value="ilustrador"
                                         checked = {state.profession === "ilustrador"}
                                         onChange={handleChange} 
-                                        /> 
-                                </div>
+                                        />
+                                    <span className="checkmark"></span> 
+
+                                </label>
 
 
                                 <button style={state.profession === "professor"?
