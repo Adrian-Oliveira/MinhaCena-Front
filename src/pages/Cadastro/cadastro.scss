@@ -1,21 +1,21 @@
 
 .cadastro{
 
-    position: absolute;
+    position: fixed;
+    bottom: 0%;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr ;
     grid-template-areas:
         "banner form";
     width: 100%;
     height: 100%;
-    margin: 0%;
     background: #FEFEFE;
 
 
-    .bannerCadastro{
+    &__banner{
         grid-area: banner;
-        width: 100%;
+        
         height: 100%;
         
         background: linear-gradient(135deg, #FD6585 0%, #0D25B9 100%);
@@ -28,14 +28,11 @@
             margin-left: 75px;
         }
         h2{
-            
-
             font-style: normal;
             font-weight: bold;
             font-size: 24px;
             line-height: 29px;
 
-            /* brand/branco */
             color: #FAF9FA;
         }
         p{
@@ -45,47 +42,46 @@
             font-size: 18px;
             line-height: 30px;
 
-            /* or 167% */
             letter-spacing: 0.03em;
-
-            /* brand/branco */
             color: #FAF9FA;
-
-
         }
 
     }
-    .formCadastro{
+    
+    &__form{
         grid-area: form;
+        height: 100%;
     }
-    .inicialStep{
-        display: grid;
-        grid-template-columns: 136px 384px auto;
-        grid-template-areas: 
-        "arrow form .";
+    
+}
 
-        .backArrow{
-            grid-area: arrow;
-            width: fit-content;
-            height: fit-content;
-            margin-top: 28px;
-            margin-left: 25px;
 
-        }
+.cadastro__form{
+    position: relative;
+    padding: 24px 179px 100px 136px;
 
-        .form{
-            grid-area: form;
- 
-            display: flexbox;            
-            text-align: center;
+    &__backArrow{
+        position: absolute;
+        top: 28px;
+        left: 25px;
 
+    }
+    &__inicialStep{
+    
+        .form{    
+            display: flex;
+            flex-direction: column;            
+
+            align-items: center;
+
+    
             .logo{
                 margin-top: 24px;
             }
             
             h2{
                 margin-top: 42px;
-
+    
                 text-align: left;
                 font-weight: bold;
                 font-size: 24px;
@@ -93,17 +89,17 @@
                 
                 color: #33303E;
             }
-
+    
             input{
                 position: absolute;
                 opacity: 0;
-                cursor: pointer;
+                
             }
-
+    
             .checkedProfessor input:checked ~ .checkmark {        
                 border: 3.5px solid #0D25B9;
             }
-
+    
             .checkedIlustrador input:checked ~ .checkmark {
                 border: 3.5px solid #A84E97;
             }
@@ -122,7 +118,7 @@
             }
             input:checked ~ .checkmark:after {
                 display: grid;
-
+    
             }
             
             .checkedProfessor .checkmark:after {
@@ -133,7 +129,7 @@
                 border-radius: 50%;
                 background: #0D25B9;
             }
-
+    
             .checkedIlustrador .checkmark:after {
                 align-self: center;
                 justify-self: center;
@@ -142,56 +138,52 @@
                 border-radius: 50%;
                 background: #A84E97;
             }
-
+    
             .checkedProfessor,.checkedIlustrador{
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
-
+    
                 cursor: pointer;
-
+    
                 font-weight: bold;
                 font-size: 18px;
                 line-height: 22px;
                 
                 border-bottom: 1px solid #C6C5CE;
                 padding-bottom: 24px;
-
+    
                 color: #33303E;
             }
-
+    
             .checkedProfessor{
                 margin-top: 34px;
             }
-
+    
             .checkedIlustrador{
                 margin-top: 54px;
             }
-
+    
             button{
                 margin-top: 44px;
                 width: 100%;
                 padding: 16px 34px;
-
+    
                 box-shadow: 0px 8px 24px rgba(250, 249, 250, 0.15);
                 border-radius: 16px;
-
+    
                 font-weight: bold;
                 font-size: 16px;
                 line-height: 20px;
-
+    
                 color: #FAF9FA;
                 &:hover{
                     cursor: pointer;
                 }
-
-
             }
-            
-
+    
         }
 
-    }
+}
 
-    
 }

@@ -9,16 +9,16 @@ import {
 
 import Home from './pages/Home';
 import Cadastro from './pages/Cadastro';
-import Professor from './pages/Professor';
-import Ilustrador from './pages/Ilustrador';
 
-import ProfessorStep1 from './pages/Professor/step1';
-import ProfessorStep2 from './pages/Professor/step2';
-import ProfessorStep3 from './pages/Professor/step3';
+import Professor from './pages/Cadastro__Professor';
+import ProfessorStep1 from './pages/Cadastro__Professor/step1';
+import ProfessorStep2 from './pages/Cadastro__Professor/step2';
+import ProfessorStep3 from './pages/Cadastro__Professor/step3';
 
-import IlustradorStep1 from './pages/Ilustrador/step1';
-import IlustradorStep2 from './pages/Ilustrador/step2';
-import IlustradorStep3 from './pages/Ilustrador/step3';
+import Ilustrador from './pages/Cadastro__Ilustrador';
+import IlustradorStep1 from './pages/Cadastro__Ilustrador/step1';
+import IlustradorStep2 from './pages/Cadastro__Ilustrador/step2';
+import IlustradorStep3 from './pages/Cadastro__Ilustrador/step3';
 
 import { CadastroProvider } from './core/utils/contextCadastro';
 

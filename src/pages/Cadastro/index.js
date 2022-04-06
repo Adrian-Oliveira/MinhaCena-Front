@@ -7,8 +7,8 @@ import logoCadastro from '../../core/assets/icons/logo_cadastro.png';
 
 import './cadastro.scss';
 
-import Professor from "../Professor";
-import Ilustrador from "../Ilustrador";
+import Professor from "../Cadastro__Professor";
+import Ilustrador from "../Cadastro__Ilustrador";
 
 
 import { FormCadastroActions, useCadastro } from "../../core/utils/contextCadastro";
@@ -47,8 +47,8 @@ const Cadastro = () => {
         <Fragment>
             <div className="cadastro" >
 
-                <div className="bannerCadastro">
-                    <img className="imgCadastro" src={imgCadastro}/>
+                <div className="cadastro__banner">
+                    <img className="banner__img" src={imgCadastro}/>
                     <h2>
                         Redação ilustrada
                     </h2>
@@ -58,12 +58,12 @@ const Cadastro = () => {
                     </p>
                 </div>
 
-                <div className="formCadastro">
+                <div className="cadastro__form">
 
-                    {(location.pathname === "/cadastro") &&
-                        <div className="inicialStep">
+                   {(location.pathname === "/cadastro") &&
+                        <div className="cadastro__form__inicialStep">
 
-                            <Link className="backArrow" to='/'>
+                            <Link className="cadastro__form__backArrow" to='/'>
                                 <img src={backArrow} />
                             </Link>
 
@@ -119,7 +119,7 @@ const Cadastro = () => {
                             
                         </div>    
                     }
-                    
+                     
                     <Outlet/>
 
                 </div>

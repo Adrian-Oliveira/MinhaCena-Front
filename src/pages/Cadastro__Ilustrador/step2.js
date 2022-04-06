@@ -56,7 +56,6 @@ const IlustradorStep2 = ()=>{
                 <div onClick={()=> navigate('../step1')}>
                     Anterior
                 </div>
-                Step2
 
                 <label>
                     Link do portfólio 
