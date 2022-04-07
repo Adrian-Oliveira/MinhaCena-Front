@@ -60,9 +60,11 @@ const ProfessorStep2 = ()=>{
                 <img src={backArrow} />
             </Link>
 
-            <img className="cadastro__professor__image" src={imgStep2} />
+            <img className="cadastro__professor__image"
+                 src={imgStep2}
+                 width='342' height='54'  />
 
-            <labe className='cadastro__professor__label'>
+            <label className='cadastro__professor__label'>
                 Nome da escola 
                 <input 
                     type='text'
@@ -70,7 +72,7 @@ const ProfessorStep2 = ()=>{
                     value={state.schoolname}
                     onChange={handleChangeSchoolname}
                     />
-            </labe>
+            </label>
 
             <label className="cadastro__professor__label" >
                 Cidade 

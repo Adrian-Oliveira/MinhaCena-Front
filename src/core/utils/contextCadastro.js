@@ -5,7 +5,7 @@ import React,{ createContext, useContext, useReducer } from 'react';
 const FormCadastro = createContext({});
 
 const initialData = {
-    profession: '',
+    profession: 'ilustrador',
     rg:'',
     name: '',
     birthday: '',

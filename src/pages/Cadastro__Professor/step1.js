@@ -29,7 +29,6 @@ const ProfessorStep1 = ()=>{
             alert(`Preencha todos os campos`);
         }
         else{
-            console.log(state)
             navigate('../step2')
         }
     }
@@ -70,7 +69,9 @@ const ProfessorStep1 = ()=>{
             </Link>
             
             
-            <img className="cadastro__professor__image" src={imgStep1} />
+            <img className="cadastro__professor__image" 
+                 src={imgStep1}
+                 width='342' height='54'  />
 
             <label className="cadastro__professor__label">
                 Nome
@@ -112,7 +113,7 @@ const ProfessorStep1 = ()=>{
                 />
             </label>
 
-            <button className=' cadastro__professor__button' onClick={handleClickNextStep}>Próximo</button>
+            <button className='cadastro__professor__button' onClick={handleClickNextStep}>Próximo</button>
             
         </Fragment>
     );

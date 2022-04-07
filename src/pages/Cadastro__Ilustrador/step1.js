@@ -1,5 +1,8 @@
 import React,{ Fragment, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
+import backArrow from '../../core/assets/icons/backArrow.png';
+import imgStep1 from '../../core/assets/icons/cadastro__ilustrador__step1.png';
 
 import {FormCadastroActions, useCadastro } from '../../core/utils/contextCadastro'
 
@@ -60,45 +63,56 @@ const IlustradorStep1 = ()=>{
 
     return(
         <Fragment>
-            <div>
-                <div onClick={()=> navigate('/cadastro', {replace:true})}>
-                    Anterior
-                </div>
 
-                <label>
-                    Nome
-                    <input 
-                        type='text' 
-                        value={state.name}
-                        onChange={handleChangeNome}
-                        />
-                </label>
-                <label>
-                    R.G
-                    <input 
-                    type='text' 
-                    value={state.rg}
-                    onChange={handleChangeRg}
+            <Link className="cadastro__ilustrador__backArrow" to='/cadastro'>
+                <img src={backArrow} />
+            </Link>
+
+            <img className="cadastro__ilustrador__image" 
+                 src={imgStep1}
+                 width='342' height='54'  />
+
+            <label className="cadastro__ilustrador__label">
+                Nome
+                <input 
+                    type='text'
+                    placeholder="Digite seu nome"
+                    value={state.name}
+                    onChange={handleChangeNome}
                     />
-                </label>
-                <label>
-                    Data de nascimento
-                    <input 
-                    type='date' 
-                    value={state.birthday}
-                    onChange={handleChangeBirthday}
-                    />
-                </label>
-                <label>
-                    Email
-                    <input 
-                    type='email'
-                    value={state.email}
-                    onChange={handleChangeEmail}
-                    />
-                </label>
-                <button onClick={handleClickNextStep}>Próximo</button>
-            </div>
+            </label>
+
+            <label className="cadastro__ilustrador__label">
+                R.G
+                <input 
+                type='text' 
+                placeholder="Digite seu RG"
+                value={state.rg}
+                onChange={handleChangeRg}
+                />
+            </label>
+
+            <label className="cadastro__ilustrador__label">
+                Data de nascimento
+                <input 
+                type='date'
+                placeholder="Digite sua data de nascimento"
+                value={state.birthday}
+                onChange={handleChangeBirthday}
+                />
+            </label>
+
+            <label className="cadastro__ilustrador__label">
+                Email
+                <input 
+                type='email'
+                placeholder="Digite seu e-mail"
+                value={state.email}
+                onChange={handleChangeEmail}
+                />
+            </label>
+            <button className='cadastro__ilustrador__button' onClick={handleClickNextStep}>Próximo</button>
+            
         </Fragment>
     );
 

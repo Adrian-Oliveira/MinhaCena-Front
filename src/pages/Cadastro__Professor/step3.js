@@ -23,7 +23,9 @@ const ProfessorStep3 = ()=>{
 
     return(
         <Fragment>
-            <img className="cadastro__professor__image" src={imgStep3} />
+            <img className="cadastro__professor__image"
+                 src={imgStep3}
+                 width='342' height='54'  />
 
             <section className="professor__step3__section">
 

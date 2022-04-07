@@ -48,7 +48,7 @@ const Cadastro = () => {
             <div className="cadastro" >
 
                 <div className="cadastro__banner">
-                    <img className="banner__img" src={imgCadastro}/>
+                    <img width='681' height='454' className="banner__img" src={imgCadastro}/>
                     <h2>
                         Redação ilustrada
                     </h2>
@@ -68,7 +68,7 @@ const Cadastro = () => {
                             </Link>
 
                             <div className="form">
-                                <img className="logo" src={logoCadastro} />
+                                <img width='178' height='136' className="logo" src={logoCadastro} />
                                 
                                 <h2>
                                     Fazer cadastro como:

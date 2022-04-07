@@ -1,5 +1,8 @@
 import React,{ Fragment, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
+import backArrow from '../../core/assets/icons/backArrow.png';
+import imgStep2 from '../../core/assets/icons/cadastro__ilustrador__step2.png';
 
 import {FormCadastroActions, useCadastro } from '../../core/utils/contextCadastro'
 
@@ -51,41 +54,51 @@ const IlustradorStep2 = ()=>{
     };
 
     return(
-        <Fragment>
-            <div>
-                <div onClick={()=> navigate('../step1')}>
-                    Anterior
-                </div>
+        <Fragment>   
 
-                <label>
-                    Link do portfólio 
-                    <input 
-                        type='text' 
-                        value={state.portfolio}
-                        onChange={handleChangePortfolio}
-                        />
-                </label>
+            <Link className="cadastro__ilustrador__backArrow" to='../step1'>
+                <img src={backArrow} />
+            </Link>
 
-                <label>
-                    Redes sociais 
-                    <input 
-                        type='text' 
-                        value={state.socialnetwork}
-                        onChange={handleChangeSocialNetwork}
-                        />
-                </label>
+            <img className="cadastro__ilustrador__image" 
+                src={imgStep2}
+                width='342' height='54'  />
 
-                <label>
-                    Contato 
-                    <input 
-                        type='text' 
-                        value={state.contact}
-                        onChange={handleChangeContact}
-                        />
-                </label>
+            <label className="cadastro__ilustrador__label">
+                Link do portfólio 
+                <input 
+                    type='text'
+                    placeholder="Coloque o link do seu portfólio" 
+                    value={state.portfolio}
+                    onChange={handleChangePortfolio}
+                    />
+            </label>
 
-                <button onClick={handleClickNextStep}>Cadastrar</button>
-            </div>
+            <label className="cadastro__ilustrador__label">
+                Redes sociais 
+                <input 
+                    type='text'
+                    placeholder="Coloque o link de suas redes sociais" 
+                    value={state.socialnetwork}
+                    onChange={handleChangeSocialNetwork}
+                    />
+            </label>
+
+            <label className="cadastro__ilustrador__label">
+                Contato 
+                <input 
+                    type='text'
+                    placeholder="Pode ser número de telefone, whatsapp ou e-mail" 
+                    value={state.contact}
+                    onChange={handleChangeContact}
+                    />
+            </label>
+
+            <button className='cadastro__ilustrador__button'
+                    onClick={handleClickNextStep}>
+                Cadastrar
+            </button>
+
         </Fragment>
     );
 
