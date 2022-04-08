@@ -43,7 +43,7 @@ const ProfessorStep1 = ()=>{
     const handleChangeRg = (event) => {
         dispatch({
             type: FormCadastroActions.setRg,
-            payload: event.target.value
+            payload: event.target.value.replace(/\D/ig, "")
        });
     };
 
@@ -88,7 +88,8 @@ const ProfessorStep1 = ()=>{
                 <input 
                 type='text'
                 placeholder="Digite seu RG" 
-                value={state.rg}
+                pattern="\d{7}"
+                maxLength={7}
                 onChange={handleChangeRg}
                 />
             </label>

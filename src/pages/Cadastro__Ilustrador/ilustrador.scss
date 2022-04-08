@@ -29,6 +29,12 @@
             border: 0.5px solid #C6C5CE;
             border-radius: 16px;
         }
+        input:required {
+            border-color: black;
+          }
+        input:invalid {
+            border-color: red;
+        }
     }
 
     &__button{

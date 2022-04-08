@@ -42,11 +42,13 @@ const IlustradorStep1 = ()=>{
     const handleChangeRg = (event) => {
         dispatch({
             type: FormCadastroActions.setRg,
-            payload: event.target.value
+            payload: event.target.value.replace(/\D/ig, "")
        });
     };
 
     const handleChangeBirthday = (event) => {
+
+        console.log(event.target.value);
         dispatch({
             type: FormCadastroActions.setBirthday,
             payload: event.target.value
@@ -76,7 +78,7 @@ const IlustradorStep1 = ()=>{
                 Nome
                 <input 
                     type='text'
-                    placeholder="Digite seu nome"
+                    placeholder="Digite seu nome"   
                     value={state.name}
                     onChange={handleChangeNome}
                     />
@@ -87,7 +89,8 @@ const IlustradorStep1 = ()=>{
                 <input 
                 type='text' 
                 placeholder="Digite seu RG"
-                value={state.rg}
+                pattern="\d{7}"
+                maxLength={7}
                 onChange={handleChangeRg}
                 />
             </label>

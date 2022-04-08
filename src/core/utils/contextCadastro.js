@@ -5,7 +5,7 @@ import React,{ createContext, useContext, useReducer } from 'react';
 const FormCadastro = createContext({});
 
 const initialData = {
-    profession: 'ilustrador',
+    profession: '',
     rg:'',
     name: '',
     birthday: '',
@@ -40,7 +40,12 @@ const cadastroReducer = (state, action) =>{
             return {...state, profession:action.payload};
         
         case FormCadastroActions.setRg:
-            return {...state, rg:action.payload};
+            if (action.payload.match(/\d{7}/)){
+                return {...state, rg:action.payload};
+            }
+            else{
+                return state;
+            }
 
         case FormCadastroActions.setName:
             return {...state, name:action.payload};
