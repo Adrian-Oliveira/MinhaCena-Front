@@ -8,6 +8,7 @@ import {
   } from "react-router-dom";
 
 import Home from './pages/Home';
+import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
 
 import Professor from './pages/Cadastro__Professor';
@@ -32,6 +33,9 @@ const RouterApp = ()=>{
                 <Routes>
 
                     <Route path="/" element={<Home/>}/>
+                    
+                    <Route path="login" element={<Login/>}/>
+
 
                     <Route path="cadastro" element={<Cadastro/>} >
                         

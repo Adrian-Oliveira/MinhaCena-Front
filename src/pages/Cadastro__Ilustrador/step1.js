@@ -27,7 +27,7 @@ const IlustradorStep1 = ()=>{
             alert(`Preencha todos os campos`);
         }
         else{
-            console.log(state)
+            
             navigate('../step2')
         }
     }

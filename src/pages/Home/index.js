@@ -1,4 +1,4 @@
-import React,{Fragment} from 'react';
+import React,{Fragment} from 'react';   
 
 import logo from '../../core/assets/icons/logo.png';
 import logo1 from '../../core/assets/icons/logo1.png';
@@ -8,10 +8,23 @@ import instaImg from '../../core/assets/icons/instagram.png';
 
 import './home.scss'
 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom';
+import {useCadastro, FormCadastroActions} from  '../../core/utils/contextCadastro';
 
 
 const Home = () => {
+
+    const navigate = useNavigate();
+    
+    const {state, dispatch} = useCadastro();
+
+    const handleClickCadastro = (typeProfession)=>{
+        dispatch({
+            type: FormCadastroActions.setProfession,
+            payload:typeProfession
+        });
+        navigate(`cadastro/${typeProfession}/step1`);
+    }
 
     /* Proproção da imagem de fundo é 679/1366*/
     let heightBanner = (679/1366)*screen.availWidth;
@@ -31,7 +44,9 @@ const Home = () => {
                 <a> Quem Somos</a>
                 <a> Quero Fazer Parte</a>
                 
-                <button>Entrar</button>
+                <button onClick={()=> navigate('login')}> 
+                    Entrar 
+                </button>
             </header>
 
             <div className='bannerContent'>
@@ -93,7 +108,9 @@ const Home = () => {
                     redação de um aluno(a).
                 </p>
                 
-                <button>Quero ilustrar</button>    
+                <button onClick={()=>handleClickCadastro('ilustrador')}>
+                    Quero ilustrar
+                </button>    
                 
             </div>
             
@@ -104,7 +121,10 @@ const Home = () => {
                 <p>Como professor, você seleciona as melhores redações de seus alunos(as) e 
                     compartilha com os nossos ilustradores parceiros, eles daram vida a está 
                     redação, assim incentivando os alunos a lerem e escreverem ainda mais.</p>
-                <button>Quero publicar redações</button>    
+
+                <button onClick={()=>handleClickCadastro('professor')}>
+                    Quero publicar redações
+                </button>    
             </div>
         </section>
         
