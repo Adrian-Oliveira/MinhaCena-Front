@@ -6,7 +6,7 @@ const FormCadastro = createContext({});
 
 const initialData = {
     profession: '',
-    rg:'',
+    cpf:'',
     name: '',
     birthday: '',
     email: '',
@@ -20,7 +20,7 @@ const initialData = {
 //Reducer 
 export const FormCadastroActions = {
     setProfession: 'profession',
-    setRg: 'rg',
+    setCpf: 'cpf',
     setName: 'name',
     setBirthday: 'birthday',
     setEmail: 'email',
@@ -39,9 +39,9 @@ const cadastroReducer = (state, action) =>{
         case FormCadastroActions.setProfession:
             return {...state, profession:action.payload};
         
-        case FormCadastroActions.setRg:
-            if (action.payload.match(/\d{7}/)){
-                return {...state, rg:action.payload};
+        case FormCadastroActions.setCpf:
+            if (action.payload.match(/\d{11}/)){
+                return {...state, cpf:action.payload};
             }
             else{
                 return state;

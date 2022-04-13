@@ -24,7 +24,7 @@ const ProfessorStep1 = ()=>{
     const handleClickNextStep = () => {
         
        
-        if(state.name === '' || state.rg === '' || state.birthday === ''  ||  state.email === ''){
+        if(state.name === '' || state.cpf === '' || state.birthday === ''  ||  state.email === ''){
 
             alert(`Preencha todos os campos`);
         }
@@ -40,9 +40,9 @@ const ProfessorStep1 = ()=>{
         });
     };
 
-    const handleChangeRg = (event) => {
+    const handleChangeCpf = (event) => {
         dispatch({
-            type: FormCadastroActions.setRg,
+            type: FormCadastroActions.setCpf,
             payload: event.target.value.replace(/\D/ig, "")
        });
     };
@@ -84,13 +84,13 @@ const ProfessorStep1 = ()=>{
             </label>
 
             <label className="cadastro__professor__label">
-                R.G
+                Cpf
                 <input 
                 type='text'
-                placeholder="Digite seu RG" 
-                pattern="\d{7}"
-                maxLength={7}
-                onChange={handleChangeRg}
+                placeholder="Digite seu Cpf" 
+                pattern="\d{11}"
+                maxLength={11}
+                onChange={handleChangeCpf}
                 />
             </label>
 
