@@ -32,12 +32,12 @@ const Home = () => {
     return( 
 
         <Fragment>  
-        <div className='banner' style={{
+        <div className='home__banner' style={{
             height: heightBanner
         }}>
             
 
-            <header>
+            <header className='home__header'>
                 <img className='logo' src={logo} />
 
                 <a> Inicio </a>
@@ -49,7 +49,7 @@ const Home = () => {
                 </button>
             </header>
 
-            <div className='bannerContent'>
+            <div className='home__bannerContent'>
 
                 <h1 className='title'>
                     MinhaCena.Org
@@ -67,7 +67,7 @@ const Home = () => {
 
         </div>
 
-        <section className='aboutUs'>
+        <section className='home__aboutUs'>
 
           
             <div className='upLine'></div>
@@ -93,7 +93,7 @@ const Home = () => {
 
         </section>
 
-        <section className='helpUs'>
+        <section className='home__helpUs'>
 
             <div className='upLine'></div>
             <h2>Como fazer parte</h2>
@@ -128,7 +128,7 @@ const Home = () => {
             </div>
         </section>
         
-        <footer>
+        <footer className='home__footer'>
 
 
             <p>Venha fazer parte deste movimento</p>

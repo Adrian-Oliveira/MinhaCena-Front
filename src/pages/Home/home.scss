@@ -1,14 +1,15 @@
 $text_color: #FAF9FA;
 
 
-.banner{
+
+.home__banner{
     position: relative;
     background-image: url('../../core/assets/img/bannerHome.png'),;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
-header{
+.home__header{
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -74,7 +75,7 @@ header{
     
 }
 
-.bannerContent{
+.home__bannerContent{
     position: relative;
     
     margin-top: 55.32px;
@@ -143,7 +144,7 @@ header{
 
 }
 
-.aboutUs{
+.home__aboutUs{
 
     display: grid;
 
@@ -227,7 +228,7 @@ header{
 }
 
 
-.helpUs{
+.home__helpUs{
     
     margin-top: 20px;
 
@@ -377,7 +378,7 @@ header{
 
 }
 
-footer{
+.home__footer{
     position:relative;
     display: grid;
     
