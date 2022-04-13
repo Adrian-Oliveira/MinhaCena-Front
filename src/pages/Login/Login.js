@@ -3,12 +3,19 @@ import './login.scss';
 
 import backArrow from '../../core/assets/icons/backArrowGrey100.png';
 import logo from '../../core/assets/icons/logo1.png'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = ()=>{
 
+    const navigate = useNavigate();
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+
+    const login = ()=>{
+        localStorage.setItem('user',  JSON.stringify({username: username}))
+	    navigate('/dashboard')
+    }
 
     return(
         <>
@@ -42,7 +49,8 @@ const Login = ()=>{
                         />
                     </label>
 
-                    <button className="login__button" disabled={!username || !password} >
+                    <button className="login__button" disabled={!username || !password} 
+                            onClick={login}>
                         Entrar
                     </button>
 

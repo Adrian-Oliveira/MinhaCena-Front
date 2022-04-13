@@ -7,9 +7,12 @@ import {
     Navigate
   } from "react-router-dom";
 
+
+
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
+import Dashboard from './pages/Dashboard';
 
 import Professor from './pages/Cadastro__Professor';
 import ProfessorStep1 from './pages/Cadastro__Professor/step1';
@@ -22,7 +25,7 @@ import IlustradorStep2 from './pages/Cadastro__Ilustrador/step2';
 import IlustradorStep3 from './pages/Cadastro__Ilustrador/step3';
 
 import { CadastroProvider } from './core/utils/contextCadastro';
-
+import PrivateRoutes from './core/utils/PrivateRoutes';
 
 const RouterApp = ()=>{
 
@@ -49,7 +52,11 @@ const RouterApp = ()=>{
                             <Route path="step2" element={<IlustradorStep2/>} />
                             <Route path="step3" element={<IlustradorStep3/>} />
                         </Route>
-                    </Route>   
+                    </Route>  
+
+                    <Route element={<PrivateRoutes/>} >
+                        <Route path='dashboard' element={<Dashboard/>} />    
+                    </Route> 
 
                     
                     <Route path="*" element={<Navigate to="/" />} />
