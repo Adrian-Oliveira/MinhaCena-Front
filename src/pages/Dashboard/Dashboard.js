@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import {Outlet, Link} from 'react-router-dom';
 import './dashboard.scss';
 
-import logo from '../../core/assets/icons/logo_cadastro.png';
-import itemPesquisa from '../../core/assets/icons/item__pesquisa.png'
+import logo from '../../core/assets/icons/logo__header-dash.png';
 
 const Dashboard = ()=>{
 
@@ -25,7 +25,7 @@ const Dashboard = ()=>{
                             <img src={logo}  width='90px' height='68.76px'/>
                         </li>
 
-                        <li>Redações</li>
+                        <li><Link to='redacoes/listar' >Redações</Link></li>
                         <li>Ilustrações</li>
                     </ul>
                 </nav>
@@ -35,23 +35,15 @@ const Dashboard = ()=>{
                 </div>
 
 
+                <button onClick={logout}>
+                    Logout
+                 </button>
+
             </header>
 
-            <div>
 
-                <input type='text'
-                    placeholder="Buscar redação: Tema, titulo, aluno, etc..." />
-                <img src={itemPesquisa} />
-            </div>
-                
-            <button>Publicar nova redação</button>
-
-            <button onClick={logout}>
-                Logout
-            </button>
-
-            <h1>Dashboard</h1>
-
+            <Outlet/>
+            
             
             
         </>

@@ -4,7 +4,8 @@ import {
     BrowserRouter,
     Route,
     Routes,
-    Navigate
+    Navigate,
+    Outlet
   } from "react-router-dom";
 
 
@@ -12,7 +13,12 @@ import {
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
+
 import Dashboard from './pages/Dashboard';
+import ListRedacoes from './pages/ListRedacoes';
+import PubliRedacoes from './pages/PubliRedacoes';
+import EditRedacoes from './pages/EditRedacoes';
+import ViewRedacoes from './pages/ViewRedacoes';
 
 import Professor from './pages/Cadastro__Professor';
 import ProfessorStep1 from './pages/Cadastro__Professor/step1';
@@ -55,7 +61,15 @@ const RouterApp = ()=>{
                     </Route>  
 
                     <Route element={<PrivateRoutes/>} >
-                        <Route path='dashboard' element={<Dashboard/>} />    
+                        <Route path='dashboard' element={<Dashboard/>}>
+                            <Route path='redacoes'>
+                                <Route path='listar' element={<ListRedacoes/>} />
+                                <Route path='publicar' element={<PubliRedacoes/>} />
+                                <Route path='editar' element={<EditRedacoes/>} />
+                                <Route path='visualizar' element={<ViewRedacoes/>} />
+                            </Route>
+
+                        </Route>    
                     </Route> 
 
                     
