@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Outlet, Link} from 'react-router-dom';
+import {Outlet, Link, NavLink} from 'react-router-dom';
 import './dashboard.scss';
 
 import logo from '../../core/assets/icons/logo__header-dash.png';
@@ -16,35 +16,43 @@ const Dashboard = ()=>{
 
     return(
         <>
+            <div className="dashboard">
 
-            <header>
+                <header className="dashboard__header">
 
-                <nav>
-                    <ul>
-                        <li>
-                            <img src={logo}  width='90px' height='68.76px'/>
-                        </li>
+                    <nav className="dashboard__nav">
+                        <ul className="dashboard__nav__ul">
+                            <li>
+                                <img src={logo}  width='90px' height='68.76px'/>
+                            </li>
 
-                        <li><Link to='redacoes/listar' >Redações</Link></li>
-                        <li>Ilustrações</li>
-                    </ul>
-                </nav>
+                            <li>
+                                <NavLink to='redacoes'
+                                className={({ isActive }) =>
+                                isActive ? 'dashboard__nav--active' : 'dashboard__nav--deactive'
+                                } >
+                                    Redações
+                                </NavLink>
+                            </li>
+                            <li>Ilustrações</li>
+                        </ul>
+                    </nav>
 
-                <div>
-                    Olá, {user.username}
-                </div>
+                    <div>
+                        Olá, {user.username}
+
+                            <button onClick={logout}>
+                                Logout
+                            </button>
+                    </div>
+
+                </header>
 
 
-                <button onClick={logout}>
-                    Logout
-                 </button>
-
-            </header>
-
-
-            <Outlet/>
+                <Outlet/>
             
             
+            </div>
             
         </>
     );

@@ -63,7 +63,7 @@ const RouterApp = ()=>{
                     <Route element={<PrivateRoutes/>} >
                         <Route path='dashboard' element={<Dashboard/>}>
                             <Route path='redacoes'>
-                                <Route path='listar' element={<ListRedacoes/>} />
+                                <Route index element={<ListRedacoes/>} />
                                 <Route path='publicar' element={<PubliRedacoes/>} />
                                 <Route path='editar' element={<EditRedacoes/>} />
                                 <Route path='visualizar' element={<ViewRedacoes/>} />
