@@ -8,44 +8,47 @@ const ListRedacoes = () => {
 
     const list = require('./list.json');
 
-    console.log(list);
 
     return(
-        <>
+        <div className="listRedacoes">
 
-            <div>
+            <div className="listRedacoes__pesquisar">
                 <input type='text'
                     placeholder="Buscar redação: Tema, titulo, aluno, etc..." />
                 <img src={itemPesquisa} />
             </div>
                 
-            <button>Publicar nova redação</button>
+            <button className="listRedacoes__publicar">
+                Publicar nova redação
+            </button>
 
-           <h1>Redações</h1>
 
-           {list.map((redacao)=>{
+          <div className="listRedacoes__cards" >
 
+            {list.map((redacao)=>{
+               
                return( 
-                    <article>
-                        <h2>{redacao.titulo}</h2>
-                        <p>{redacao.text}</p>
+                   <div className="listRedacoes__cards__gradient-box">
 
-                        {redacao.tema.map((tema)=><span> {tema} </span>)}
+                        <article className="listRedacoes__cards__card">
+                            <h2>{redacao.titulo}</h2>
+                            <p>{`${redacao.text.slice(0,478)}...`}</p>
 
-                        <div>Autor(a): {redacao.aluno}</div>
-                        <div>Idade:{redacao.idade} anos</div>
-                        <div>Turma:{redacao.turma}</div>
-                        
-                    </article>
+                            {redacao.tema.map((tema)=><span> {tema} </span>)}
+
+                            <div>Autor(a): {redacao.aluno}</div>
+                            <div>Idade:{redacao.idade} anos</div>
+                            <div>Turma:{redacao.turma}</div>
+                            
+                        </article>
+
+                   </div>
                 );
-           })}
+            })}
 
 
-
-
-            
-            
-        </>
+            </div>
+        </div>
     );
 }
 
