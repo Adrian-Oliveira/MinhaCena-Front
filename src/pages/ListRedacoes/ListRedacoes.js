@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import './listRedacoes.scss';
 
 import itemPesquisa from '../../core/assets/icons/item__pesquisa.png';
@@ -30,15 +31,37 @@ const ListRedacoes = () => {
                return( 
                    <div className="listRedacoes__cards__gradient-box">
 
-                        <article className="listRedacoes__cards__card">
-                            <h2>{redacao.titulo}</h2>
-                            <p>{`${redacao.text.slice(0,478)}...`}</p>
+                        <article className="listRedacoes__cards__card
+                                            listRedacoes__cards__card">
+                            <h2 className="listRedacoes__cards__card__title
+                                            listRedacoes__cards__card__title--typography">
+                                {redacao.titulo}
+                            </h2>
+                            <p className="listRedacoes__cards__card__text
+                                          listRedacoes__cards__card__text--typography">
+                                {`${redacao.text.slice(0,478)}...`}    
+                            </p>
+                            <div className="listRedacoes__cards__card__tags
+                                            listRedacoes__cards__card__tags--typography">
+                                {redacao.tema.map((tema)=><span> {tema} </span>)}
+                            </div>
 
-                            {redacao.tema.map((tema)=><span> {tema} </span>)}
+                            <div className="listRedacoes__cards__card__info--typography">
+                                <div>Autor(a): {redacao.aluno}</div>
+                                <div>Idade:{redacao.idade} anos</div>
+                                <div>Turma:{redacao.turma}</div>
+                            </div>
 
-                            <div>Autor(a): {redacao.aluno}</div>
-                            <div>Idade:{redacao.idade} anos</div>
-                            <div>Turma:{redacao.turma}</div>
+                            <NavLink to='./editar' 
+                                     className='listRedacoes__cards__card__editar
+                                                listRedacoes__cards__card__editar--typography'>
+                                Editar
+                            </NavLink>
+
+                            <div className='listRedacoes__cards__card__excluir
+                                            listRedacoes__cards__card__excluir--typography'>Editar</div>
+
+                            
                             
                         </article>
 
