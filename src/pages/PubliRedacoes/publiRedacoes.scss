@@ -1,0 +1,16 @@
+.publiRedacoes{
+
+    
+    padding: 40px 75px;
+
+    &__card{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        &__doubleCol{
+            grid-column: 1/3;
+        }
+    }
+
+}

@@ -1,0 +1,16 @@
+.cardGradientBorder{
+    width: 100%;
+    $border-size:2px;
+    &__gradient-box{
+        width: 100%;
+        background: linear-gradient(135deg, #FD6585 0%, #0D25B9 100%);
+        padding: $border-size;
+    }
+
+    &__card{
+        width: 100%;        
+        background: #FEFEFE;
+        box-shadow: 0px 8px 24px rgba(215, 216, 220, 0.15);
+
+    }
+}

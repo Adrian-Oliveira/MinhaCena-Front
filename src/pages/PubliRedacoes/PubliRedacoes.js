@@ -1,80 +1,88 @@
 import React from "react";
 import './publiRedacoes.scss';
 
+import { CardGradientBorder } from "../../components/CardGradientBorder/CardGradientBorder";
+
 
 const PubliRedacoes = () => {
 
     return(
         <>
-            <div>
-                <h3>Publicar redação</h3>
-                <label >
-                    Título
-                    <input 
-                        type='text'
-                        placeholder="Digite o título da redação"   
 
-                        />
-                </label>
+            <div className="publiRedacoes">
 
-                <label >
-                    Redação
-                    <input 
-                        type='text'
-                        placeholder="Digite a redação"   
+                <CardGradientBorder >
 
-                        />
-                </label>
+                    <div className='publiRedacoes__card'>
 
-                <label >
-                    Aluno(a)
-                    <input 
-                        type='text'
-                        placeholder="Digite o nome do aluno(a)"   
 
-                        />
-                </label>
+                        <h3 className="publiRedacoes__card__doubleCol" >Publicar redação</h3>
 
-                <label >
-                    Idade
-                    <input 
-                        type='number'
-                        min={0}
-                        max={100}
-                        placeholder="Digite a idade do aluno(a)"   
+                        <label className="publiRedacoes__card__doubleCol">
+                            Título
+                            <input 
+                                type='text'
+                                placeholder="Digite o título da redação"   
 
-                        />
-                </label>
+                                />
+                        </label>
 
-                <label >
-                    Turma
-                    <input 
-                        type='text'
-                        placeholder="Digite a turma do aluno(a)"   
+                        <label className="publiRedacoes__card__doubleCol">
+                            Redação
+                            <textarea
+                                placeholder="Digite a redação"   
+                                cols="40"
+                                rows="5"
 
-                        />
-                </label>
+                                />
+                        </label>
 
-                <label >
-                    Tema da redação
-                    <input 
-                        type='text'
-                        placeholder="Digite aqui o tema da redação.
-                                    Ex: Fantasia, Faroeste, Suspense, etc..."   
+                        <label className="" >
+                            Aluno(a)
+                            <input 
+                                type='text'
+                                placeholder="Digite o nome do aluno(a)"   
 
-                        />
-                </label>
+                                />
+                        </label>
 
-                <button>Cancelar</button>
-                <button>Publicar redação</button>
+                        <label className="" >
+                            Idade
+                            <input 
+                                type='number'
+                                min={0}
+                                max={100}
+                                placeholder="Digite a idade do aluno(a)"   
 
+                                />
+                        </label>
+
+                        <label className="" >
+                            Turma
+                            <input 
+                                type='text'
+                                placeholder="Digite a turma do aluno(a)"   
+
+                                />
+                        </label>
+
+                        <label className="" >
+                            Tema da redação
+                            <input 
+                                type='text'
+                                placeholder="Digite aqui o tema da redação.
+                                Ex: Fantasia, Faroeste, Suspense, etc..."   
+
+                                />
+                        </label>
+
+                        <button>Cancelar</button>
+                        <button>Publicar redação</button>
+
+                    </div>
+
+                </CardGradientBorder>
             </div>
-
-
-
-
-
-            
             
         </>
     );

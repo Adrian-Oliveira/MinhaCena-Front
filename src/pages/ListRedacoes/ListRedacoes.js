@@ -1,13 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import {useNavigate, NavLink, Navigate } from "react-router-dom";
 import './listRedacoes.scss';
 
+import { CardGradientBorder } from "../../components/CardGradientBorder/CardGradientBorder";
 import itemPesquisa from '../../core/assets/icons/item__pesquisa.png';
 
 
 const ListRedacoes = () => {
 
     const list = require('./list.json');
+
+    const navigate = useNavigate();
+
 
 
     return(
@@ -19,7 +23,7 @@ const ListRedacoes = () => {
                 <img src={itemPesquisa} />
             </div>
                 
-            <button className="listRedacoes__publicar">
+            <button onClick={()=>navigate('./publicar')} className="listRedacoes__publicar">
                 Publicar nova redação
             </button>
 
@@ -29,10 +33,11 @@ const ListRedacoes = () => {
             {list.map((redacao)=>{
                
                return( 
-                   <div className="listRedacoes__cards__gradient-box">
 
-                        <article className="listRedacoes__cards__card
-                                            listRedacoes__cards__card">
+                <CardGradientBorder borderRadius={32}>
+
+
+                        <article className="listRedacoes__cards__card">
                             <h2 className="listRedacoes__cards__card__title
                                             listRedacoes__cards__card__title--typography">
                                 {redacao.titulo}
@@ -65,7 +70,8 @@ const ListRedacoes = () => {
                             
                         </article>
 
-                   </div>
+                </CardGradientBorder>
+                   
                 );
             })}
 
