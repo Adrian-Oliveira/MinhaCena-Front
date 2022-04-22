@@ -1,5 +1,6 @@
 import React from "react";
-import './cardGradientBorder.scss'
+import PropTypes from 'prop-types';
+import './cardGradientBorder.scss';
 
 const CardGradientBorder = ({children, className, borderRadius})=>{
 
@@ -19,6 +20,12 @@ const CardGradientBorder = ({children, className, borderRadius})=>{
         </div>
     );
 
+}
+
+CardGradientBorder.propTypes={
+    children: PropTypes.element,
+    className: PropTypes.string,
+    borderRadius:PropTypes.number
 }
 
 CardGradientBorder.defaultProps = {

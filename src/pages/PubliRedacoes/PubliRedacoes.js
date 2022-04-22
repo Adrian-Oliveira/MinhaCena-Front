@@ -1,8 +1,8 @@
 import React from "react";
 import './publiRedacoes.scss';
 
-import { CardGradientBorder } from "../../components/CardGradientBorder/CardGradientBorder";
-
+import CardGradientBorder from "../../components/CardGradientBorder";
+import Button from "../../components/Button";
 
 const PubliRedacoes = () => {
 
@@ -78,6 +78,8 @@ const PubliRedacoes = () => {
 
                         <button>Cancelar</button>
                         <button>Publicar redação</button>
+
+                        <Button theme="blue" label="Publicar redação"/>
 
                     </div>
 

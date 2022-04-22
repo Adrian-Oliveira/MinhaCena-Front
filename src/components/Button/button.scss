@@ -1,0 +1,37 @@
+.buttonComponent{
+
+    width: 100%;
+    max-width: 337px;
+    height: 52px;
+    border-radius: 16px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    text-align: center;
+
+    &--blue{
+    
+        background: #0D25B9;
+        box-shadow: 0px 8px 24px rgba(13, 37, 185, 0.15);
+
+        color: #FAF9FA;
+    }
+
+    &--purple{
+
+        background: #A84E97;
+        box-shadow: 0px 8px 24px rgba(168, 78, 151, 0.15);
+
+        color: #FAF9FA;
+    }
+
+    &--grey{
+        background: #FEFEFE;
+        border: 2px solid #7A7786;
+
+        /* Grey / 300 */
+        color: #7A7786;
+    }
+}
