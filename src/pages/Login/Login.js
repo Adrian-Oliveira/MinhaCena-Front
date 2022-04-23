@@ -14,7 +14,7 @@ const Login = ()=>{
 
     const login = ()=>{
         localStorage.setItem('user',  JSON.stringify({username: username}))
-	    navigate('/dashboard')
+	    navigate('/dashboard/redacoes')
     }
 
     return(

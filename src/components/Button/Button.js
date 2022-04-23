@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import './button.scss';
 
-const Button = ({label, theme, onClick})=>{
+const Button = ({label, theme, onClick, className})=>{
 
     return(
-        <button className={`buttonComponent buttonComponent--${theme}`}
+        <button className={`${className}buttonComponent buttonComponent--${theme}`}
                 onClick={()=>onClick} >
             {label}
         </button>
@@ -16,13 +16,15 @@ const Button = ({label, theme, onClick})=>{
 Button.defaultProps = {
     label:'',
     theme:'blue',
-    onClick:()=>{}
+    onClick:()=>{},
+    className:''
 }
 
 Button.propTypes={
     label: PropTypes.string,
     theme: PropTypes.oneOf(['blue','purple','grey']),
-    onClick:PropTypes.func
+    onClick:PropTypes.func,
+    className:PropTypes.string
 }
 
 
