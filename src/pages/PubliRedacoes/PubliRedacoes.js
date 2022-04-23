@@ -1,11 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import './publiRedacoes.scss';
 
-import closeIcon from '../../core/assets/icons/close.png'
+import closeIcon from '../../core/assets/icons/close.png';
 
 import CardGradientBorder from "../../components/CardGradientBorder";
 import Button from "../../components/Button";
-import { useNavigate } from "react-router-dom";
 
 const PubliRedacoes = () => {
     

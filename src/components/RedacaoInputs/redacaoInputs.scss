@@ -1,0 +1,117 @@
+.redacaoInputs__inputs{
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas: 
+    "title title"
+    "redacao redacao"
+    "aluno tema"
+    "idade tema"
+    "turma tema"
+    ;
+
+    gap: 24px 111px;
+
+    input,textarea{
+        padding: 16px;
+        background: #F6F7F9;
+        
+
+        /* Grey / 100 */
+        border: 1px solid #F1F0F5;
+        box-sizing: border-box;
+        border-radius: 16px;
+    }
+
+    input{
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        
+        color: #33303E;
+    }
+
+    textarea{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+
+        letter-spacing: 0.03em;
+
+        color: #33303E;
+    }
+
+    &--typography{
+        h4{
+
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 160%;
+            color: #33303E;
+        }
+
+    }
+
+    &__title{
+        
+        grid-area: title;
+        input{
+            width: 100%;
+            
+        }
+    }
+
+    &__redacao{
+        
+        grid-area: redacao;
+        width: 100%;
+        textarea{
+            width: 100%;
+            max-width: 100%;
+            height: 501px;
+            
+            resize: none;
+            
+        }
+    }
+    &__aluno{
+        grid-area: aluno;
+        input{
+            width: 100%;
+            
+        }
+    }    
+    &__idade{
+        grid-area: idade;
+        input{
+            width: 100%;
+            
+        }
+    }    
+    &__turma{
+        grid-area: turma;
+        input{
+            width: 100%;
+            
+        }
+    }
+    &__tema{
+        grid-area: tema;
+
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+        textarea{
+            width: 100%;
+            height: 100%;
+            resize: none;
+            
+        }   
+        
+    }
+}

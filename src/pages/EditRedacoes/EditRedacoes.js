@@ -1,81 +1,48 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import './editRedacoes.scss';
+
+import closeIcon from '../../core/assets/icons/close.png';
+
+import CardGradientBorder from "../../components/CardGradientBorder";
+import RedacaoInputs from "../../components/RedacaoInputs";
+import Button from "../../components/Button";
 
 
 const EditRedacoes = () => {
 
     const redacao =  require('./redacao.json');
+    const navigate = useNavigate();
+
 
     return(
         <>
-            <div>
-                <h3>Editar redação</h3>
-                <label >
-                    Título
-                    <input 
-                        type='text'
-                        placeholder="Digite o título da redação" 
-                        defaultValue={redacao.titulo}  
+            <div className="editRedacoes">
 
-                        />
-                </label>
+                <CardGradientBorder >
 
-                <label >
-                    Redação
-                    <input 
-                        type='text'
-                        placeholder="Digite a redação"   
-                        defaultValue={redacao.text}  
+                    <div className="editRedacoes__card">
+                        
+                        <img className="editRedacoes__card__closeIcon"
+                                src={closeIcon}
+                                onClick={()=>navigate('..')} />
 
-                        />
-                </label>
+                        <h3 className="editRedacoes__card__title">Editar redação</h3>
+                        
+                        <RedacaoInputs redacao={redacao} />
 
-                <label >
-                    Aluno(a)
-                    <input 
-                        type='text'
-                        placeholder="Digite o nome do aluno(a)"   
-                        defaultValue={redacao.aluno}  
 
-                        />
-                </label>
+                        <span className="editRedacoes__card__buttons">
+                            <div className="editRedacoes__card__buttons__containerCancelar">
+                                    <Button theme="grey" label="Cancelar"/>
+                            </div>
 
-                <label >
-                    Idade
-                    <input 
-                        type='number'
-                        min={0}
-                        max={100}
-                        placeholder="Digite a idade do aluno(a)"   
-                        defaultValue={redacao.idade}  
+                            <Button theme="blue" label="Gravar"/>
+                        </span>
 
-                        />
-                </label>
+                    </div>
 
-                <label >
-                    Turma
-                    <input 
-                        type='text'
-                        placeholder="Digite a turma do aluno(a)"   
-                        defaultValue={redacao.turma}  
-
-                        />
-                </label>
-
-                <label >
-                    Tema da redação
-                    <input 
-                        type='text'
-                        placeholder="Digite aqui o tema da redação.
-                                    Ex: Fantasia, Faroeste, Suspense, etc..."   
-                        defaultValue={redacao.tema}  
-
-                        />
-                </label>
-
-                <button>Cancelar</button>
-                <button>Gravar</button>
-
+                </CardGradientBorder>
             </div>
 
         </>
