@@ -1,82 +1,51 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import './viewRedacoes.scss';
 
+import closeIcon from '../../core/assets/icons/close.png';
+
+import CardGradientBorder from "../../components/CardGradientBorder";
+import RedacaoInputs from "../../components/RedacaoInputs";
+import Button from "../../components/Button";
 
 const ViewRedacoes = () => {
 
     const redacao =  require('./redacao.json');
+    const navigate = useNavigate();
+
 
     return(
         <>
             <div>
-                <h3>Redação</h3>
-                <label >
-                    Título
-                    <input 
-                        type='text'
-                        placeholder="Digite o título da redação" 
-                        value={redacao.titulo} 
-                        readOnly
 
-                        />
-                </label>
+                <div className="viewRedacoes">
 
-                <label >
-                    Redação
-                    <input 
-                        type='text'
-                        placeholder="Digite a redação"   
-                        value={redacao.text}  
-                        readOnly
-                        />
-                </label>
+                    <CardGradientBorder >
 
-                <label >
-                    Aluno(a)
-                    <input 
-                        type='text'
-                        placeholder="Digite o nome do aluno(a)"   
-                        value={redacao.aluno}  
-                        readOnly
-                        />
-                </label>
+                        <div className="viewRedacoes__card">
+                            
+                            <img className="viewRedacoes__card__closeIcon"
+                                    src={closeIcon}
+                                    onClick={()=>navigate('..')} />
 
-                <label >
-                    Idade
-                    <input 
-                        type='number'
-                        min={0}
-                        max={100}
-                        placeholder="Digite a idade do aluno(a)"   
-                        value={redacao.idade}  
-                        readOnly
-                    />
-                </label>
+                            <h3 className="viewRedacoes__card__title">Redação</h3>
+                            
+                            <RedacaoInputs readOnly={true} redacao={redacao}/>
 
-                <label >
-                    Turma
-                    <input 
-                        type='text'
-                        placeholder="Digite a turma do aluno(a)"   
-                        value={redacao.turma}  
-                        readOnly
-                        />
-                </label>
 
-                <label >
-                    Tema da redação
-                    <input 
-                        type='text'
-                        placeholder="Digite aqui o tema da redação.
-                                    Ex: Fantasia, Faroeste, Suspense, etc..."   
-                        value={redacao.tema}  
-                        readOnly
-                        />
-                </label>
+                            <span className="viewRedacoes__card__buttons">
+                                <div className="viewRedacoes__card__buttons__containerCancelar">
+                                        <Button theme="red" label="Excluir"/>
+                                </div>
 
-                <button>Excluir</button>
-                <button>Editar redação</button>
+                                <Button theme="blue" label="Editar redação"/>
+                            </span>
 
+                        </div>
+
+                    </CardGradientBorder>
+                </div>
             </div>
 
         </>

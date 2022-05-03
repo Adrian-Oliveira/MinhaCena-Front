@@ -64,7 +64,7 @@ const ListRedacoes = () => {
                             </NavLink>
 
                             <div className='listRedacoes__cards__card__excluir
-                                            listRedacoes__cards__card__excluir--typography'>Editar</div>
+                                            listRedacoes__cards__card__excluir--typography'>Excluir</div>
 
                             
                             

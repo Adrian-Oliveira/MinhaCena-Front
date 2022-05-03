@@ -29,7 +29,7 @@ const EditRedacoes = () => {
 
                         <h3 className="editRedacoes__card__title">Editar redação</h3>
                         
-                        <RedacaoInputs redacao={redacao} />
+                        <RedacaoInputs readOnly={false} redacao={redacao}/>
 
 
                         <span className="editRedacoes__card__buttons">

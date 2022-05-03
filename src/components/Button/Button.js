@@ -6,7 +6,7 @@ import './button.scss';
 const Button = ({label, theme, onClick, className})=>{
 
     return(
-        <button className={`${className}buttonComponent buttonComponent--${theme}`}
+        <button className={`${className} buttonComponent buttonComponent--${theme}`}
                 onClick={()=>onClick} >
             {label}
         </button>
@@ -22,7 +22,7 @@ Button.defaultProps = {
 
 Button.propTypes={
     label: PropTypes.string,
-    theme: PropTypes.oneOf(['blue','purple','grey']),
+    theme: PropTypes.oneOf(['blue','purple','grey','red']),
     onClick:PropTypes.func,
     className:PropTypes.string
 }

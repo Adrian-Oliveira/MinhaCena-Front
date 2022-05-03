@@ -1,3 +1,28 @@
+@import "node_modules/@pathofdev/react-tag-input/src/styles/index.scss";
+.react-tag-input{
+    background: #F6F7F9;
+    border: 0;
+    border-radius: 16px;
+    &__tag{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+
+        /* identical to box height, or 26px */
+        text-align: center;
+
+        /* Grey / 300 */
+        color: #7A7786;
+        padding: 6px 16px;
+        background: #F1F0F5;
+        border-radius: 16px;
+    }
+    &__tag__remove{
+        background-color: transparent;
+    }
+}
+
 .redacaoInputs__inputs{
 
     display: grid;
@@ -16,12 +41,9 @@
 
     input,textarea{
         padding: 16px;
-        background: #F6F7F9;
-        
+        background: #F6F7F9;        
 
-        /* Grey / 100 */
         border: 1px solid #F1F0F5;
-        box-sizing: border-box;
         border-radius: 16px;
     }
 
@@ -106,12 +128,17 @@
         flex-direction: column;
 
         height: 100%;
-        textarea{
-            width: 100%;
+        border: none;
+        border-radius: 0;
+        &__container{
             height: 100%;
-            resize: none;
-            
-        }   
-        
+            background: #F6F7F9;
+
+            /* Grey / 100 */
+            border: 1px solid #F1F0F5;
+            box-sizing: border-box;
+            border-radius: 16px;
+        }
+
     }
 }

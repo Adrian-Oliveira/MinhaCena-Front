@@ -1,11 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import PropTypes from 'prop-types';
+
+import ReactTagInput from "@pathofdev/react-tag-input";
 import './redacaoInputs.scss'
 
 
 const RedacaoInputs =({redacao, className, readOnly})=>{
+
+    const [tags,setTags] = useState(redacao.tema);
     return(
 
+<>
         <div className="redacaoInputs__inputs redacaoInputs__inputs--typography">
 
             <label className="redacaoInputs__inputs__title">
@@ -14,7 +19,7 @@ const RedacaoInputs =({redacao, className, readOnly})=>{
                     type='text'
                     placeholder="Digite o título da redação"   
                     readOnly={readOnly}
-                    value={redacao.titulo}
+                    defaultValue={redacao.titulo}
                     />
 
             </label>
@@ -25,8 +30,9 @@ const RedacaoInputs =({redacao, className, readOnly})=>{
                 <textarea
                     placeholder="Digite a redação"   
                     readOnly={readOnly}
+                    defaultValue={redacao.text}                    
+
                     >
-                    {redacao.text}
                 </textarea>
 
             </label>
@@ -37,7 +43,7 @@ const RedacaoInputs =({redacao, className, readOnly})=>{
                     type='text'
                     placeholder="Digite o nome do aluno(a)"   
                     readOnly={readOnly}
-                    value={redacao.aluno}
+                    defaultValue={redacao.aluno}
                     />
 
             </label>
@@ -50,7 +56,7 @@ const RedacaoInputs =({redacao, className, readOnly})=>{
                     max={100}
                     placeholder="Digite a idade do aluno(a)"   
                     readOnly={readOnly}
-                    value={redacao.idade}
+                    defaultValue={redacao.idade}
                     />
 
             </label>
@@ -61,24 +67,40 @@ const RedacaoInputs =({redacao, className, readOnly})=>{
                     type='text'
                     placeholder="Digite a turma do aluno(a)"   
                     readOnly={readOnly}
-                    value={redacao.turma}
+                    defaultValue={redacao.turma}
                 />
 
             </label>
 
             <label className="redacaoInputs__inputs__tema" >
                 <h4>Tema da redação</h4>
-                <textarea
+                {/* <textarea
                     placeholder="Digite aqui o tema da redação.
                     Ex: Fantasia, Faroeste, Suspense, etc..."   
-                    readOnly={readOnly}                    
+                    readOnly={readOnly}
+                    defaultValue={redacao.tema}                    
                 >
-                    {JSON.stringify(redacao.tema)}
-                </textarea>
+                
+                </textarea> */}
+                <div className="redacaoInputs__inputs__tema__container">
+
+                    <ReactTagInput
+                        tags={tags}
+                        onChange={(newTags) => {setTags(newTags)}}
+                        placeholder="Digite aqui o tema da redação.
+                        Ex: Fantasia, Faroeste, Suspense, etc..." 
+                        editable={!readOnly} 
+                        readOnly={readOnly}
+                        />
+                </div>
+                
 
             </label>
 
+
         </div>
+
+        </>
     );
 }
 
