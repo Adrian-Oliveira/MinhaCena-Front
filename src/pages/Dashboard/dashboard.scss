@@ -17,18 +17,36 @@
 }
 
 .dashboard__nav{
-    width: 466px;
+    width: 100%;
+    max-width: 466px;
 
-    &--active{
-        text-decoration: none;
-        color: black;
-        padding-bottom: 8px;
-        border-bottom: 2px solid blue;
+
+    &__redacoes{
+        &--active{
+            text-decoration: none;
+            color: black;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #0D25B9;
+        }
+        &--deactive{
+            text-decoration: none;
+            color: black;
+        }
     }
-    &--deactive{
-        text-decoration: none;
-        color: black;
+
+    &__ilustracoes{
+        &--active{
+            text-decoration: none;
+            color: black;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #A84E97;
+        }
+        &--deactive{
+            text-decoration: none;
+            color: black;
+        }
     }
+
     &__ul{
         
         width: 100%;

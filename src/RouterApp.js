@@ -20,6 +20,9 @@ import PubliRedacoes from './pages/PubliRedacoes';
 import EditRedacoes from './pages/EditRedacoes';
 import ViewRedacoes from './pages/ViewRedacoes';
 
+import ListIlustracoes from './pages/ListIlustracoes';
+
+
 import Professor from './pages/Cadastro__Professor';
 import ProfessorStep1 from './pages/Cadastro__Professor/step1';
 import ProfessorStep2 from './pages/Cadastro__Professor/step2';
@@ -62,13 +65,16 @@ const RouterApp = ()=>{
 
                     <Route element={<PrivateRoutes/>} >
                         <Route path='dashboard' element={<Dashboard/>}>
-                            <Route path='redacoes'>
+                            <Route  path='redacoes'>
                                 <Route index element={<ListRedacoes/>} />
                                 <Route path='publicar' element={<PubliRedacoes/>} />
                                 <Route path='editar' element={<EditRedacoes/>} />
                                 <Route path='visualizar' element={<ViewRedacoes/>} />
                             </Route>
-
+                            <Route path='ilustracoes'>
+                                <Route index element={<ListIlustracoes/>} />
+                                <Route path='visualizar' element={<ViewRedacoes/>} />
+                            </Route>
                         </Route>    
                     </Route> 
 

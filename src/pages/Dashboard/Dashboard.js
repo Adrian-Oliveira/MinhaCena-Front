@@ -29,12 +29,21 @@ const Dashboard = ()=>{
                             <li>
                                 <NavLink to='redacoes'
                                 className={({ isActive }) =>
-                                isActive ? 'dashboard__nav--active' : 'dashboard__nav--deactive'
+                                isActive ? 'dashboard__nav__redacoes--active' :
+                                           'dashboard__nav__redacoes--deactive'
                                 } >
                                     Redações
                                 </NavLink>
                             </li>
-                            <li>Ilustrações</li>
+                            <li>
+                                <NavLink to='ilustracoes'
+                                className={({ isActive }) =>
+                                isActive ? 'dashboard__nav__ilustracoes--active' :
+                                           'dashboard__nav__ilustracoes--deactive'
+                                } >
+                                    Ilustrações
+                                </NavLink>
+                            </li>
                         </ul>
                     </nav>
 
