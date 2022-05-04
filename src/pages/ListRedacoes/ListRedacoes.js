@@ -1,5 +1,7 @@
 import React from "react";
 import {useNavigate, NavLink, Navigate } from "react-router-dom";
+import ReactTagInput from "@pathofdev/react-tag-input";
+
 import './listRedacoes.scss';
 
 import { CardGradientBorder } from "../../components/CardGradientBorder/CardGradientBorder";
@@ -48,7 +50,12 @@ const ListRedacoes = () => {
                             </p>
                             <div className="listRedacoes__cards__card__tags
                                             listRedacoes__cards__card__tags--typography">
-                                {redacao.tema.map((tema)=><span> {tema} </span>)}
+                                
+                                <ReactTagInput
+                                    tags={redacao.tema}
+                                    editable={false} 
+                                    readOnly={true}
+                                    />
                             </div>
 
                             <div className="listRedacoes__cards__card__info--typography">

@@ -1,27 +1,34 @@
 @import "node_modules/@pathofdev/react-tag-input/src/styles/index.scss";
-.react-tag-input{
-    background: #F6F7F9;
-    border: 0;
-    border-radius: 16px;
-    &__tag{
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 160%;
 
-        /* identical to box height, or 26px */
-        text-align: center;
 
-        /* Grey / 300 */
-        color: #7A7786;
-        padding: 6px 16px;
-        background: #F1F0F5;
+/* moddificando o tema padrão do componente externo react-tag-input */
+.redacaoInputs__inputs{
+
+    .react-tag-input{
+        background: #F6F7F9;
+        border: 0;
         border-radius: 16px;
-    }
-    &__tag__remove{
-        background-color: transparent;
+        &__tag{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+
+            /* identical to box height, or 26px */
+            text-align: center;
+
+            /* Grey / 300 */
+            color: #7A7786;
+            padding: 6px 16px;
+            background: #F1F0F5;
+            border-radius: 16px;
+        }
+        &__tag__remove{
+            background-color: transparent;
+        }
     }
 }
+
 
 .redacaoInputs__inputs{
 

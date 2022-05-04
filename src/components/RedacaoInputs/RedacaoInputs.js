@@ -74,14 +74,6 @@ const RedacaoInputs =({redacao, className, readOnly})=>{
 
             <label className="redacaoInputs__inputs__tema" >
                 <h4>Tema da redação</h4>
-                {/* <textarea
-                    placeholder="Digite aqui o tema da redação.
-                    Ex: Fantasia, Faroeste, Suspense, etc..."   
-                    readOnly={readOnly}
-                    defaultValue={redacao.tema}                    
-                >
-                
-                </textarea> */}
                 <div className="redacaoInputs__inputs__tema__container">
 
                     <ReactTagInput

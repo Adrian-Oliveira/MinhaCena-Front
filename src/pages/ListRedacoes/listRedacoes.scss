@@ -1,3 +1,33 @@
+@import "node_modules/@pathofdev/react-tag-input/src/styles/index.scss";
+
+.listRedacoes{
+
+    .react-tag-input{
+        background: transparent;
+        border: 0;
+        padding: 0;
+        border-radius: 16px;
+        &__tag{
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 160%;
+
+            /* identical to box height, or 16px */
+            text-align: center;
+
+            /* Grey / 300 */
+            color: #7A7786;
+
+            /* Grey / 300 */
+            color: #7A7786;
+            padding: 6px 16px;
+            background: #F1F0F5;
+            border-radius: 16px;
+        }
+
+    }
+}
+
 .listRedacoes{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
