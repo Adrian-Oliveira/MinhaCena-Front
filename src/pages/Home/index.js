@@ -76,15 +76,14 @@ const Home = () => {
 
 
             <p >
-            O MinhaCena.Org é uma ferramenta de impacto social e educacional,
-            que propõe estímulo para melhora na escrita,
-            leitura e produção de arte por parte de alunos de escolas publicas,
-            privadas e ONGs de contraturno escolar. A plataforma conecta professores de Portugues
-            e Artes, que cadastram redações de seus alunos que são revisadas e adaptadas em quadrinhos
-            por nossa comunidade de ilustradores voluntarios, trazendo visibilidade aos artistas e 
-            dando suporte a forma pedagogica que o professor leciona em seus projetos. O MinhaCena.Org
-            é uma das metodologias ativas voltadas ao ensino hibrido e tecnologia,
-               fazendo do aluno o protagonista no seu aprendizado.Faça Parte!
+            O MinhaCena.Org é uma ferramenta gratuita de impacto social e educacional,
+             que propõe estímulo para melhora na escrita, leitura e produção de arte por parte de 
+             alunos de escolas publicas, privadas e ONGs de contraturno escolar. A plataforma 
+             conecta professores de Portugues e Artes, que cadastram redações de seus alunos que 
+             são revisadas e adaptadas em quadrinhos por nossa comunidade de ilustradores voluntarios, 
+             trazendo visibilidade aos artistas e dando suporte a forma pedagogica que o professor 
+             leciona em seus projetos. O MinhaCena.Org é uma das metodologias ativas voltadas ao ensino 
+             hibrido e tecnologia, fazendo do aluno o protagonista no seu aprendizado.Faça Parte!
             </p>
 
             <div className='logo'>
