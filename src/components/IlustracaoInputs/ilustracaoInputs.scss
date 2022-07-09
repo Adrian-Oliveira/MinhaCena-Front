@@ -1,0 +1,170 @@
+@import "node_modules/@pathofdev/react-tag-input/src/styles/index.scss";
+
+
+/* moddificando o tema padrão do componente externo react-tag-input */
+.ilustracaoInputs__inputs{
+
+    .react-tag-input{
+        background: #F6F7F9;
+        border: 0;
+        border-radius: 16px;
+        &__tag{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+
+            /* identical to box height, or 26px */
+            text-align: center;
+
+            /* Grey / 300 */
+            color: #7A7786;
+            padding: 6px 16px;
+            background: #F1F0F5;
+            border-radius: 16px;
+        }
+        &__tag__remove{
+            background-color: transparent;
+        }
+    }
+}
+
+
+.ilustracaoInputs__inputs{
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template: 
+    "title title" 1fr
+    "entrada entrada" 6fr
+    "ilustrador tema" 3.5fr
+    ". tema" 
+    ". tema" 
+    ;
+
+    gap: 24px 111px;
+
+    input,textarea{
+        padding: 16px;
+        background: #F6F7F9;        
+
+        border: 1px solid #F1F0F5;
+        border-radius: 16px;
+    }
+
+    input{
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        
+        color: #33303E;
+    }
+
+    textarea{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+
+        letter-spacing: 0.03em;
+
+        color: #33303E;
+    }
+
+    &--typography{
+        h4{
+
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 160%;
+            color: #33303E;
+        }
+
+    }
+
+    &__title{
+        
+        grid-area: title;
+        input{
+            width: 100%;
+            
+        }
+    }
+    &__entrada{
+        grid-area: entrada;
+        display: flex;
+        flex-direction: column;
+
+        
+        width: 100%;
+
+        input{
+            display: none;
+        }
+        
+        &__imageUpload{
+            position: absolute;
+
+            width: auto;
+            height: auto;
+
+            max-width: 100%;
+            max-height: 100%;
+            
+        }
+        label{
+            position: relative;
+            
+            overflow: auto;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+            
+            
+            padding: 16px;
+            background: #F6F7F9;        
+            border: 1px solid #F1F0F5;
+            border-radius: 16px;
+
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 39px;
+            
+            color: #7A7786;
+        }
+    }
+    
+    &__ilustrador{
+        grid-area: ilustrador;
+        input{
+            width: 100%;
+            
+        }
+    }    
+    &__tema{
+        grid-area: tema;
+
+        display: flex;
+        flex-direction: column;
+
+        border: none;
+        border-radius: 0;
+        &__container{
+            height: 100%;
+            background: #F6F7F9;
+
+            /* Grey / 100 */
+            border: 1px solid #F1F0F5;
+            box-sizing: border-box;
+            border-radius: 16px;
+        }
+
+    }
+}

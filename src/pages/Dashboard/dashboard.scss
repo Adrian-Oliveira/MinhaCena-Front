@@ -1,4 +1,5 @@
 .dashboard{
+
     background-color: #F6F7F9;
     
     &__header{
@@ -11,6 +12,19 @@
         
         width: 100%;
         height: 98px;
+    }
+
+    &__user{
+        summary{
+            cursor: pointer;
+        }
+
+        &__buttons{
+            position: absolute;
+            background-color: red;
+            top: 98px;
+            right: 0;
+        }
     }
 
 

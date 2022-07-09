@@ -1,0 +1,51 @@
+.tostDash{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;    
+    z-index: 999;
+
+    background-color: rgb(0,0, 0, 0.2);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+
+        width: 100%;
+        height: fit-content;
+
+        max-width: 278px;
+        max-height: 316px;
+
+        padding: 16px 0px;
+
+        background: #FEFEFE;
+
+        border: 1px solid #F1F0F5;
+
+        box-shadow: 0px 8px 24px rgba(13, 37, 185, 0.15);
+        border-radius: 16px;
+        
+        &__username{
+            padding: 29px 0px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+        }
+
+        &__buttons{
+            width: 100%;
+            padding: 16px;
+            border-top: 1px solid #F1F0F5;
+            cursor: pointer;
+        }
+
+    }
+}

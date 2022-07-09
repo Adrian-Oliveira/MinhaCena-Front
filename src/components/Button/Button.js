@@ -7,7 +7,7 @@ const Button = ({label, theme, onClick, className})=>{
 
     return(
         <button className={`${className} buttonComponent buttonComponent--${theme}`}
-                onClick={()=>onClick} >
+                onClick={onClick} >
             {label}
         </button>
     );

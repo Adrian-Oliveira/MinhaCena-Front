@@ -5,10 +5,10 @@ import './cardGradientBorder.scss';
 const CardGradientBorder = ({children, className, borderRadius})=>{
 
     const styleGradientBox = {
-        'border-radius': borderRadius
+        'borderRadius': borderRadius
     }
     const styleCard = {
-        'border-radius': borderRadius -1
+        'borderRadius': borderRadius -1
     }
     
     return(

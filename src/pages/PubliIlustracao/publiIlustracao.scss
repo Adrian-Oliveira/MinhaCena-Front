@@ -1,0 +1,36 @@
+.publiIlustracao{
+    padding: 40px 75px;
+
+    &__card{
+        position: relative;
+
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 33px 42px 40px 32px;
+        
+        
+        &__title{
+            margin-bottom: 63px;
+            text-align: center;
+        }
+        &__closeIcon{
+            position: absolute;
+            top: 16px;
+            right: 38px;
+
+            cursor: pointer;
+        }
+
+        &__buttons{
+            display: flex;
+            margin-top: 40px;
+            justify-content: flex-end;
+            column-gap: 32px;
+
+            &__containerCancelar{
+                width: 122px;
+            }
+        }
+    }
+}

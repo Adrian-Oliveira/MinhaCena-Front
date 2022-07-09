@@ -1,3 +1,3 @@
-import { ViewRedacoes } from "./ViewRedacoes.js";
+import { ViewIlustracoes } from "./ViewIlustracoes.js";
 
-export default ViewRedacoes;
+export default ViewIlustracoes;

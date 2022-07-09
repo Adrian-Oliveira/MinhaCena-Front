@@ -1,0 +1,82 @@
+.viewIlustracoes{
+    padding: 40px 75px;
+
+    &__card{
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        padding: 33px 42px 40px 32px;
+        
+        
+        &__title{
+            margin-bottom: 63px;
+            text-align: center;
+        }
+
+        &__closeIcon{
+            position: absolute;
+            top: 16px;
+            right: 38px;
+
+            cursor: pointer;
+        }
+        &__buttons{
+            display: flex;
+            margin-top: 40px;
+            justify-content: flex-end;
+            column-gap: 32px;
+
+            &__containerCancelar{
+                width: 122px;
+            }
+        }
+    }
+
+    
+    &__redacaoLabel{
+        width: 100%;
+
+        &__img{
+            width: 100%;
+            height: auto;
+            margin-top: 32px;
+        }
+
+        &__title{
+            
+            
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 160%;
+            color: #33303E;
+            
+    
+        }
+        input{
+            width: 100%;
+
+            padding: 16px;
+
+            background: #F6F7F9;        
+            border: 1px solid #F1F0F5;
+            border-radius: 16px;
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            
+            color: #33303E;
+        }
+        
+        &__ilustrador,&__aluno{
+            margin-top: 24px;
+            input{
+                max-width: 435px;
+            }
+        }
+    
+    }
+    
+}

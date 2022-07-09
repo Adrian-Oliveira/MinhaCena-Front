@@ -9,19 +9,13 @@ import {
   } from "react-router-dom";
 
 
+import ProfessorTree from './core/utils/ProfessorTree';
+import IllustratorTree from './core/utils/IllustratorTree';
+
 
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Cadastro from './pages/Cadastro';
-
-import Dashboard from './pages/Dashboard';
-import ListRedacoes from './pages/ListRedacoes';
-import PubliRedacoes from './pages/PubliRedacoes';
-import EditRedacoes from './pages/EditRedacoes';
-import ViewRedacoes from './pages/ViewRedacoes';
-
-import ListIlustracoes from './pages/ListIlustracoes';
-
 
 import Professor from './pages/Cadastro__Professor';
 import ProfessorStep1 from './pages/Cadastro__Professor/step1';
@@ -32,6 +26,22 @@ import Ilustrador from './pages/Cadastro__Ilustrador';
 import IlustradorStep1 from './pages/Cadastro__Ilustrador/step1';
 import IlustradorStep2 from './pages/Cadastro__Ilustrador/step2';
 import IlustradorStep3 from './pages/Cadastro__Ilustrador/step3';
+
+
+import Dashboard from './pages/Dashboard';
+import ListRedacoes from './pages/ListRedacoes';
+import PubliRedacoes from './pages/PubliRedacoes';
+import EditRedacoes from './pages/EditRedacoes';
+import ViewRedacoes from './pages/ViewRedacoes';
+
+import ListIlustracoes from './pages/ListIlustracoes';
+import ViewIlustracoes from './pages/ViewIlustracoes';
+
+
+import ListRedacoesToIllustrator  from './pages/ListRedacoesToIllustrator'; 
+import ViewRedacoesToIllustrator from './pages/ViewRedacoesToIllustrator';
+import PubliIlustracao from './pages/PubliIlustracao';
+
 
 import { CadastroProvider } from './core/utils/contextCadastro';
 import PrivateRoutes from './core/utils/PrivateRoutes';
@@ -63,19 +73,41 @@ const RouterApp = ()=>{
                         </Route>
                     </Route>  
 
+                    {/* Rotas privadas */}
                     <Route element={<PrivateRoutes/>} >
-                        <Route path='dashboard' element={<Dashboard/>}>
-                            <Route  path='redacoes'>
-                                <Route index element={<ListRedacoes/>} />
-                                <Route path='publicar' element={<PubliRedacoes/>} />
-                                <Route path='editar' element={<EditRedacoes/>} />
-                                <Route path='visualizar' element={<ViewRedacoes/>} />
+
+                        <Route path='escola' element={<ProfessorTree/>} >
+                            <Route path='dashboard' element={<Dashboard/>}>
+
+                                <Route path='redacoes'>
+                                    <Route index  element={<ListRedacoes/>} />
+                                    <Route path='publicar' element={<PubliRedacoes/>} />
+                                    <Route path='editar' element={<EditRedacoes/>} />
+                                    <Route path='visualizar' element={<ViewRedacoes/>} />
+                                </Route>
+                                <Route path='ilustracoes'>
+                                    <Route index element={<ListIlustracoes/>} />
+                                    <Route path='visualizar' element={<ViewIlustracoes/>} />
+                                </Route> 
+                            
                             </Route>
-                            <Route path='ilustracoes'>
-                                <Route index element={<ListIlustracoes/>} />
-                                <Route path='visualizar' element={<ViewRedacoes/>} />
+                        </Route>   
+
+                        <Route path='ilustrador' element={<IllustratorTree/>} >
+
+                            <Route path='dashboard' element={<Dashboard/>}>
+
+                                <Route path='redacoes'>
+
+                                    <Route index  element={<ListRedacoesToIllustrator/>} />
+                                    <Route path='visualizar' element={<ViewRedacoesToIllustrator/>} />
+                                    <Route path='publicar' element={<PubliIlustracao/>} />
+
+                                </Route>
+                            
                             </Route>
-                        </Route>    
+                        </Route>   
+
                     </Route> 
 
                     

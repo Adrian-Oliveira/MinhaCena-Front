@@ -4,14 +4,15 @@ import './dashboard.scss';
 
 import logo from '../../core/assets/icons/logo__header-dash.png';
 
+import TostDash from "../../components/TostDash";
+
 const Dashboard = ()=>{
 
     
     const user=JSON.parse(localStorage.getItem('user'));
+
+    const [trigger, setTrigger] = useState(false);
     
-    const logout = ()=>{
-        localStorage.removeItem('user');
-    }
     
 
     return(
@@ -47,12 +48,17 @@ const Dashboard = ()=>{
                         </ul>
                     </nav>
 
-                    <div>
-                        Olá, {user.username}
+                    <div className="dashboard__user">
+                        
+                        <details open={trigger} className="dashboard__user__details" >
+                            <summary onClick={()=>setTrigger(true)}>
+                                Olá, {user.username}
+                            </summary>
 
-                            <button onClick={logout}>
-                                Logout
-                            </button>
+                            <TostDash trigger={trigger} setTrigger={setTrigger} />
+
+                        </details>
+
                     </div>
 
                 </header>

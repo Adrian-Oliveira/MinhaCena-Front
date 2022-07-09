@@ -12,9 +12,15 @@ const Login = ()=>{
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    /* Completamente temporário */
+    /* const typeAccount = 'escola'; */
+    const typeAccount = 'ilustrador';
+    /* ======================== */
+
+
     const login = ()=>{
-        localStorage.setItem('user',  JSON.stringify({username: username}))
-	    navigate('/dashboard/redacoes')
+        localStorage.setItem('user',  JSON.stringify({username: username,typeAccount:typeAccount}))
+	    navigate(`/${typeAccount}/dashboard/redacoes`, {replace:true})
     }
 
     return(

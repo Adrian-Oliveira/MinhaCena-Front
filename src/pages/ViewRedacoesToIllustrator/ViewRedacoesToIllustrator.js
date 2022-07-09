@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { useNavigate } from "react-router-dom";
 
-import './viewRedacoes.scss';
+import './viewRedacoesToIllustrator.scss';
 
 import closeIcon from '../../core/assets/icons/close.png';
 
@@ -10,7 +10,7 @@ import RedacaoInputs from "../../components/RedacaoInputs";
 import Button from "../../components/Button";
 import TostExcluir from "../../components/TostExcluir";
 
-const ViewRedacoes = () => {
+const ViewRedacoesToIllustrator = () => {
 
     const redacao =  require('./redacao.json');
     const navigate = useNavigate();
@@ -21,32 +21,32 @@ const ViewRedacoes = () => {
     return(
         <>
             
-
-            <div className="viewRedacoes">
+            <div className="viewRedacoesToIllustrator">
 
                 <CardGradientBorder >
 
-                    <div className="viewRedacoes__card">
+                    <div className="viewRedacoesToIllustrator__card">
                         
-                        <img className="viewRedacoes__card__closeIcon"
+                        <img className="viewRedacoesToIllustrator__card__closeIcon"
                                 src={closeIcon}
                                 onClick={()=>navigate('..')} />
 
-                        <h3 className="viewRedacoes__card__title">Redação</h3>
+                        <h3 className="viewRedacoesToIllustrator__card__title">Redação</h3>
                         
                         <RedacaoInputs readOnly={true} redacao={redacao}/>
 
 
-                        <span className="viewRedacoes__card__buttons">
-                            <div className="viewRedacoes__card__buttons__containerCancelar">
+                        <span className="viewRedacoesToIllustrator__card__buttons">
+                            <div className="viewRedacoesToIllustrator__card__buttons__containerCancelar">
 
-                                <Button onClick={()=>setTrigger(true)} 
-                                        theme="red"
-                                        label="Excluir"/>
+                                <Button onClick={()=>navigate(-1)} 
+                                        theme="grey"
+                                        label="Fechar"/>
                             </div>
 
-                            <Button theme="blue" 
-                                    label="Editar redação"/>
+                            <Button onClick={()=>navigate('../publicar')}
+                                    theme="purple" 
+                                    label="Publicar ilustração"/>
                         </span>
 
                     </div>
@@ -59,4 +59,4 @@ const ViewRedacoes = () => {
     );
 }
 
-export {ViewRedacoes};
+export {ViewRedacoesToIllustrator};

@@ -1,0 +1,48 @@
+.tostExcluir{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;    
+    z-index: 999;
+
+    background-color: rgb(0,0, 0, 0.2);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        text-align: center;
+
+        max-width: 384px;
+
+        &__atencao,&__info,&__buttons{
+            padding: 16px 24px;
+        }
+
+        &__atencao{
+            color: #FD6585;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 160%;
+        }
+
+        &__info{
+            border-top: 1px solid #F1F0F5;
+            border-bottom: 1px solid #F1F0F5;
+        }
+
+        &__buttons{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+    }
+}

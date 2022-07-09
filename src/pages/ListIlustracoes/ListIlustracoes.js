@@ -31,11 +31,11 @@ const ListIlustracoes = () => {
 
           <div className="listIlustracoes__cards" >
 
-            {list.map((redacao)=>{
+            {list.map((redacao,index)=>{
                
                return( 
 
-                <CardGradientBorder borderRadius={32}>
+                <CardGradientBorder key={index} borderRadius={32}>
 
 
                         <article className="listIlustracoes__cards__card">
@@ -56,7 +56,8 @@ const ListIlustracoes = () => {
                                     />
                             </div>
 
-                            <div className="listIlustracoes__cards__card__info--typography">
+                            <div className="listIlustracoes__cards__card__info
+                                            listIlustracoes__cards__card__info--typography">
 
 
                                 <div>Ilustrador(a):{redacao.ilustrador}</div>
@@ -68,15 +69,15 @@ const ListIlustracoes = () => {
                             </div>
 
                             <NavLink  to='.'
-                                     className='listIlustracoes__cards__card__editar
-                                                listIlustracoes__cards__card__editar--typography'>
+                                     className='listIlustracoes__cards__card__baixar
+                                                listIlustracoes__cards__card__baixar--typography'>
                                 Baixar ilustração
                             </NavLink>
 
-                            <div className='listIlustracoes__cards__card__excluir
-                                            listIlustracoes__cards__card__excluir--typography'>
+                            <NavLink to='./visualizar' className='listIlustracoes__cards__card__ver
+                                            listIlustracoes__cards__card__ver--typography'>
                                 Ver
-                            </div>
+                            </NavLink>
 
                             
                             

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './editRedacoes.scss';
 
@@ -7,12 +7,16 @@ import closeIcon from '../../core/assets/icons/close.png';
 import CardGradientBorder from "../../components/CardGradientBorder";
 import RedacaoInputs from "../../components/RedacaoInputs";
 import Button from "../../components/Button";
+import TostEdit from "../../components/TostEdit";
 
 
 const EditRedacoes = () => {
 
     const redacao =  require('./redacao.json');
     const navigate = useNavigate();
+
+
+    const [trigger, setTrigger] = useState(false);
 
 
     return(
@@ -37,13 +41,20 @@ const EditRedacoes = () => {
                                     <Button theme="grey" label="Cancelar"/>
                             </div>
 
-                            <Button theme="blue" label="Gravar"/>
+                            <Button theme="blue"
+                                    label="Gravar"
+                                    onClick={()=>setTrigger(true)}
+                                    />
                         </span>
 
                     </div>
 
                 </CardGradientBorder>
             </div>
+
+            <TostEdit redacao={redacao}
+                      trigger={trigger}
+            />
 
         </>
     );
