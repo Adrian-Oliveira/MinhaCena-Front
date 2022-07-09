@@ -15,7 +15,6 @@ const ListRedacoes = () => {
     const navigate = useNavigate();
 
 
-
     return(
         <div className="listRedacoes">
 
@@ -37,7 +36,6 @@ const ListRedacoes = () => {
                return( 
 
                 <CardGradientBorder borderRadius={32}>
-
 
                         <article className="listRedacoes__cards__card">
                             <h2 className="listRedacoes__cards__card__title
